@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfucaseofrsl2"]
+
+[ext_resource type="Script" path="res://Scripts/platform_script.gd" id="1_eofsa"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0l73p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbwxs"]
+size = Vector2(300, 50)
+
+[sub_resource type="QuadMesh" id="QuadMesh_bydtg"]
+size = Vector2(300, 50)
+
+[sub_resource type="QuadMesh" id="QuadMesh_mpdqx"]
+size = Vector2(295, 45)
+
+[node name="StandardPlatform" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_0l73p")
+script = ExtResource("1_eofsa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qbwxs")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(1.09738e-05, 0.819119, 0.885529, 1)
+mesh = SubResource("QuadMesh_bydtg")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0.289233, 0.315385, 1)
+mesh = SubResource("QuadMesh_mpdqx")
+
+[node name="PlatformDuration" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="timeout" from="PlatformDuration" to="." method="_on_platform_duration_timeout"]
