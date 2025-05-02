@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://1vx1q6gru07a"]
+[gd_scene load_steps=4 format=3 uid="uid://b8kv51u3miolj"]
 
 [ext_resource type="Script" path="res://Scripts/lab_rat.gd" id="1_0tchg"]
 [ext_resource type="Texture2D" uid="uid://b7csabhbr4kxy" path="res://Assets/Art/Players/Buddy.png" id="2_ce6xr"]
