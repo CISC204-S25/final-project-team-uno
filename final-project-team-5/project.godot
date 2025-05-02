@@ -14,6 +14,10 @@ config/name="Final project Team 5"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+mouse_cursor/custom_image="res://Assets/Art/Players/gooberdrone.png"
+
 [input]
 
 move_left={
