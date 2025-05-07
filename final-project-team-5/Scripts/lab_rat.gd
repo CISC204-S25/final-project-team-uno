@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y += gravity * delta
 	
 	#inputs only affect x axis
-	var dir = Input.get_axis("walk_left", "walk_right")
+	var dir = Input.get_axis("move_left", "move_right")
 	
 	#applies driction and acceleration
 	if dir != 0:
