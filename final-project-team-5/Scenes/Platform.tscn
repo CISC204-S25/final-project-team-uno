@@ -13,9 +13,11 @@ size = Vector2(300, 50)
 [sub_resource type="QuadMesh" id="QuadMesh_mpdqx"]
 size = Vector2(295, 45)
 
-[node name="StandardPlatform" type="StaticBody2D"]
+[node name="Platforms" type="StaticBody2D" node_paths=PackedStringArray("TimeB4Moving")]
 physics_material_override = SubResource("PhysicsMaterial_0l73p")
 script = ExtResource("1_eofsa")
+moving_platform = false
+TimeB4Moving = NodePath("Moving Variant/TimeBeforeMoving")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_qbwxs")
@@ -32,4 +34,9 @@ mesh = SubResource("QuadMesh_mpdqx")
 wait_time = 4.0
 autostart = true
 
+[node name="Moving Variant" type="Node2D" parent="."]
+
+[node name="TimeBeforeMoving" type="Timer" parent="Moving Variant"]
+
 [connection signal="timeout" from="PlatformDuration" to="." method="_on_platform_duration_timeout"]
+[connection signal="timeout" from="Moving Variant/TimeBeforeMoving" to="." method="_on_time_before_moving_timeout"]

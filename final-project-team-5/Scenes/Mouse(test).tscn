@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ceyp7ov5d8n1"]
 
 [ext_resource type="Script" path="res://Scripts/mouse_script.gd" id="1_vk8yq"]
-[ext_resource type="PackedScene" uid="uid://dfucaseofrsl2" path="res://scenes/Platform.tscn" id="2_wtre0"]
+[ext_resource type="PackedScene" uid="uid://dfucaseofrsl2" path="res://Scenes/Platform.tscn" id="2_wtre0"]
 [ext_resource type="Texture2D" uid="uid://bdc5jqg22qx3g" path="res://Assets/Art/Players/gooberdrone.png" id="3_rihsd"]
 
 [node name="Mouse" type="Node2D"]
@@ -9,4 +9,5 @@ script = ExtResource("1_vk8yq")
 platform = ExtResource("2_wtre0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("3_rihsd")
