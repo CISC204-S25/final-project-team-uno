@@ -1,0 +1,99 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgyhcrkq788du"]
+
+[ext_resource type="Texture2D" uid="uid://c52q6pbjs5goq" path="res://Assets/Art/Background/IMG_2413.png" id="1_1ulrh"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h0o1a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rukos"]
+
+[node name="Tutorial_Level" type="Node2D"]
+
+[node name="Backgrounds" type="Node2D" parent="."]
+
+[node name="Img2413" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(639, 358)
+texture = ExtResource("1_1ulrh")
+
+[node name="Img2414" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(1919, 358)
+texture = ExtResource("1_1ulrh")
+
+[node name="Img2415" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(3197, 358)
+texture = ExtResource("1_1ulrh")
+
+[node name="Img2416" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(4475, 358)
+texture = ExtResource("1_1ulrh")
+
+[node name="Img2417" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(5751, 358)
+texture = ExtResource("1_1ulrh")
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms"]
+position = Vector2(264, 682)
+scale = Vector2(26.5598, 20.1886)
+physics_material_override = SubResource("PhysicsMaterial_h0o1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D"]
+shape = SubResource("RectangleShape2D_rukos")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Platforms"]
+position = Vector2(1216, 682)
+scale = Vector2(47.0798, 20.1886)
+physics_material_override = SubResource("PhysicsMaterial_h0o1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D2"]
+shape = SubResource("RectangleShape2D_rukos")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Platforms"]
+position = Vector2(2066, 682)
+scale = Vector2(14.6797, 20.1886)
+physics_material_override = SubResource("PhysicsMaterial_h0o1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D3"]
+shape = SubResource("RectangleShape2D_rukos")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Platforms"]
+position = Vector2(2780, 682)
+scale = Vector2(36.2797, 20.1886)
+physics_material_override = SubResource("PhysicsMaterial_h0o1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D4"]
+shape = SubResource("RectangleShape2D_rukos")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Platforms"]
+position = Vector2(3866, 676)
+scale = Vector2(36.2797, 20.1886)
+physics_material_override = SubResource("PhysicsMaterial_h0o1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D5"]
+shape = SubResource("RectangleShape2D_rukos")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Platforms"]
+position = Vector2(4974, 676)
+scale = Vector2(28.0397, 20.1886)
+physics_material_override = SubResource("PhysicsMaterial_h0o1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D6"]
+shape = SubResource("RectangleShape2D_rukos")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Platforms"]
+position = Vector2(6024, 676)
+scale = Vector2(36.2797, 20.1886)
+physics_material_override = SubResource("PhysicsMaterial_h0o1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D7"]
+shape = SubResource("RectangleShape2D_rukos")
+
+[node name="StinkyPits" type="Node2D" parent="."]
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="StinkyPits"]
+position = Vector2(3212, 568)
+scale = Vector2(321.427, 2.89257)
+physics_material_override = SubResource("PhysicsMaterial_h0o1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StinkyPits/StaticBody2D8"]
+shape = SubResource("RectangleShape2D_rukos")
