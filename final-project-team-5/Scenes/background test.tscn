@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpd0u6i41hrjv"]
+
+[ext_resource type="Texture2D" uid="uid://b65ihyf6yv56t" path="res://Assets/Art/Background/IMG_2416.png" id="1_s73em"]
+
+[node name="Background" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+texture_repeat = 3
+repeat_times = 2
+
+[node name="Img2416" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(574.5, 323.5)
+scale = Vector2(0.897656, 0.901389)
+texture = ExtResource("1_s73em")
