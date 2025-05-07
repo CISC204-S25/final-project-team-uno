@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@export var moving_platform: bool = true
+@export var moving_platform: bool = false
 @export var speed = 200
 @export var TimeB4Moving: Timer
 var movetheplatform: bool = false
@@ -8,7 +8,7 @@ var movetheplatform: bool = false
 func _physics_process(delta):
 	if moving_platform == true:
 		#TimeB4Moving.start()
-		pass
+		#pass
 		if movetheplatform == true:
 			move_local_x(2.5, true) #moves the platform after time delay
 

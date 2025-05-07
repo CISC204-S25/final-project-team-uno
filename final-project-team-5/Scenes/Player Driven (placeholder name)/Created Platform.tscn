@@ -16,7 +16,6 @@ size = Vector2(295, 45)
 [node name="CreatedPlatforms" type="StaticBody2D" node_paths=PackedStringArray("TimeB4Moving")]
 physics_material_override = SubResource("PhysicsMaterial_0l73p")
 script = ExtResource("1_eofsa")
-moving_platform = false
 TimeB4Moving = NodePath("Moving Variant/TimeBeforeMoving")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
