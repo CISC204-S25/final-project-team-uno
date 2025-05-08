@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgyhcrkq788du"]
+[gd_scene load_steps=6 format=3 uid="uid://bgyhcrkq788du"]
 
 [ext_resource type="Texture2D" uid="uid://c52q6pbjs5goq" path="res://Assets/Art/Background/IMG_2413.png" id="1_1ulrh"]
 [ext_resource type="PackedScene" uid="uid://b8kv51u3miolj" path="res://Scenes/Player Driven (placeholder name)/Lab_rat.tscn" id="2_0svkm"]
+[ext_resource type="PackedScene" uid="uid://ceyp7ov5d8n1" path="res://Scenes/Controls/Mouse(test).tscn" id="3_83vg8"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h0o1a"]
 
@@ -113,3 +114,5 @@ shape = SubResource("RectangleShape2D_rukos")
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_0svkm")]
 position = Vector2(178, 377)
 jumpVelocity = -25.0
+
+[node name="Mouse" parent="." instance=ExtResource("3_83vg8")]
