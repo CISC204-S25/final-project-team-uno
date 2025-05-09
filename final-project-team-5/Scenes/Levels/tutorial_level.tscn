@@ -113,6 +113,6 @@ shape = SubResource("RectangleShape2D_rukos")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_0svkm")]
 position = Vector2(178, 377)
-jumpVelocity = -25.0
+jumpVelocity = -250.0
 
 [node name="Mouse" parent="." instance=ExtResource("3_83vg8")]

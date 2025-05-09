@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://qcvq23wx47yq"]
+
+[ext_resource type="Script" path="res://Scripts/lab_rat.gd" id="1_kcnka"]
+[ext_resource type="Texture2D" uid="uid://b7csabhbr4kxy" path="res://Assets/Art/Players/Buddy.png" id="2_0vl7f"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7xd63"]
+height = 37.0672
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_kcnka")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_0vl7f")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -3
+position = Vector2(6, 16)
+scale = Vector2(9.82, 9.82)
+shape = SubResource("CapsuleShape2D_7xd63")
