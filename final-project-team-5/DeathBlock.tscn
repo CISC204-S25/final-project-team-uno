@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://di4vicm4mq37n"]
+
+[ext_resource type="PackedScene" uid="uid://b8kv51u3miolj" path="res://Scenes/Player Driven (placeholder name)/Lab_rat.tscn" id="2_6s01g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjmo0"]
+size = Vector2(138, 457)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p5fg2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7ksp"]
+size = Vector2(20, 19.9561)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_6s01g")]
+position = Vector2(258, 325)
+
+[node name="Death block" type="Area2D" parent="CharacterBody2D"]
+position = Vector2(1352, -31)
+scale = Vector2(-1.01169, 1.93199)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Death block"]
+shape = SubResource("RectangleShape2D_qjmo0")
+
+[node name="Platforms" type="Node2D" parent="."]
+position = Vector2(0, -42)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms"]
+position = Vector2(267, 790)
+scale = Vector2(26.5598, 20.1886)
+physics_material_override = SubResource("PhysicsMaterial_p5fg2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D"]
+shape = SubResource("RectangleShape2D_f7ksp")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Platforms"]
+position = Vector2(1219, 790)
+scale = Vector2(47.0798, 20.1886)
+physics_material_override = SubResource("PhysicsMaterial_p5fg2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D2"]
+shape = SubResource("RectangleShape2D_f7ksp")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Platforms"]
+position = Vector2(2069, 790)
+scale = Vector2(14.6797, 20.1886)
+physics_material_override = SubResource("PhysicsMaterial_p5fg2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D3"]
+shape = SubResource("RectangleShape2D_f7ksp")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Platforms"]
+position = Vector2(2783, 790)
+scale = Vector2(36.2797, 20.1886)
+physics_material_override = SubResource("PhysicsMaterial_p5fg2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D4"]
+shape = SubResource("RectangleShape2D_f7ksp")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Platforms"]
+position = Vector2(3869, 784)
+scale = Vector2(36.2797, 20.1886)
+physics_material_override = SubResource("PhysicsMaterial_p5fg2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D5"]
+shape = SubResource("RectangleShape2D_f7ksp")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Platforms"]
+position = Vector2(4977, 784)
+scale = Vector2(28.0397, 20.1886)
+physics_material_override = SubResource("PhysicsMaterial_p5fg2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D6"]
+shape = SubResource("RectangleShape2D_f7ksp")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Platforms"]
+position = Vector2(6027, 784)
+scale = Vector2(36.2797, 20.1886)
+physics_material_override = SubResource("PhysicsMaterial_p5fg2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D7"]
+shape = SubResource("RectangleShape2D_f7ksp")
+
+[connection signal="area_entered" from="CharacterBody2D/Death block" to="CharacterBody2D" method="_on_death_block_area_entered"]

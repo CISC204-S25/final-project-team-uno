@@ -30,3 +30,6 @@ func _physics_process(delta: float) -> void:
 	#only jump when on the ground
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = jumpVelocity
+
+func _on_death_block_area_entered(area: Area2D) -> void:
+	get_tree().reload_current_scene()
