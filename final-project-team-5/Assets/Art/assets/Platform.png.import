@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3isv2v4vmry"
-valid=false
+uid="uid://wh273422i4vk"
+path="res://.godot/imported/Platform.png-8cd07eff82e8645831483002357ad2ca.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Assets/Art/assets/Platform.png"
+dest_files=["res://.godot/imported/Platform.png-8cd07eff82e8645831483002357ad2ca.ctex"]
 
 [params]
 

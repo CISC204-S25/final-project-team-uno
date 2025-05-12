@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://cv3n6nhbgk5y2"]
+
+[ext_resource type="Script" path="res://Scripts/platforms_ui_script.gd" id="1_nqlhc"]
+[ext_resource type="PackedScene" uid="uid://dfucaseofrsl2" path="res://Scenes/Player Driven (placeholder name)/Created Platform.tscn" id="2_jed6e"]
+[ext_resource type="PackedScene" uid="uid://ceyp7ov5d8n1" path="res://Scenes/Controls/Mouse(test).tscn" id="3_sgrlc"]
+[ext_resource type="Script" path="res://Scripts/Globals/global_platform_organizing.gd" id="4_5ux0r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twswk"]
+size = Vector2(20, 20.6667)
+
+[node name="Platforms_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nqlhc")
+
+[node name="Platforms" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 64.0
+
+[node name="Standard Platform" type="Button" parent="Platforms"]
+layout_mode = 2
+text = "   Standard   "
+
+[node name="Moving Platform" type="Button" parent="Platforms"]
+layout_mode = 2
+text = "   Moving (➡️)  "
+
+[node name="CreatedPlatforms" parent="." instance=ExtResource("2_jed6e")]
+
+[node name="Mouse" parent="." instance=ExtResource("3_sgrlc")]
+
+[node name="MoveCreatedPlatform (Global Script)" type="Node" parent="."]
+script = ExtResource("4_5ux0r")
+
+[node name="NoCreationArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoCreationArea"]
+position = Vector2(112, 32)
+scale = Vector2(12, 3)
+shape = SubResource("RectangleShape2D_twswk")
+
+[connection signal="MovingPlatformOff" from="." to="CreatedPlatforms" method="_on_platforms_ui_moving_platform_off"]
+[connection signal="MovingPlatformOff" from="." to="MoveCreatedPlatform (Global Script)" method="_on_platforms_ui_moving_platform_off"]
+[connection signal="MovingPlatformOn" from="." to="CreatedPlatforms" method="_on_platforms_ui_moving_platform_on"]
+[connection signal="MovingPlatformOn" from="." to="MoveCreatedPlatform (Global Script)" method="_on_platforms_ui_moving_platform_on"]
+[connection signal="pressed" from="Platforms/Standard Platform" to="." method="_on_standard_platform_pressed"]
+[connection signal="pressed" from="Platforms/Moving Platform" to="." method="_on_moving_platform_pressed"]
+[connection signal="area_entered" from="NoCreationArea" to="Mouse" method="_on_no_creation_area_area_entered"]
+[connection signal="area_exited" from="NoCreationArea" to="Mouse" method="_on_no_creation_area_area_exited"]

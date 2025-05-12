@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://1nbca0v7w4pg"]
+[gd_scene load_steps=6 format=3 uid="uid://1nbca0v7w4pg"]
 
 [ext_resource type="PackedScene" uid="uid://ceyp7ov5d8n1" path="res://Scenes/Controls/Mouse(test).tscn" id="1_i32p0"]
 [ext_resource type="Texture2D" uid="uid://c52q6pbjs5goq" path="res://Assets/Art/Background/IMG_2413.png" id="1_qc08e"]
 [ext_resource type="PackedScene" uid="uid://qcvq23wx47yq" path="res://Scenes/Player Driven (placeholder name)/Lab_rat(Duplicated-different_test).tscn" id="2_gxw77"]
+[ext_resource type="PackedScene" uid="uid://cv3n6nhbgk5y2" path="res://Scenes/UI/platforms_ui.tscn" id="4_h1sdg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_erwat"]
 
@@ -36,3 +37,5 @@ scale = Vector2(12.68, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 shape = SubResource("RectangleShape2D_erwat")
+
+[node name="Platforms_UI" parent="." instance=ExtResource("4_h1sdg")]
