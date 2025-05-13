@@ -11,7 +11,7 @@ var MovementLocking: bool =false #Locks (disables) the CREATED platforms from ch
 var VariantCooldown: bool = false #extensive timer similar to "MovementLocking"
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if moving_platform == true:
 		#TimeB4Moving.start()
 		#pass

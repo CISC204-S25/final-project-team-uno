@@ -33,3 +33,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_death_block_area_entered(_area: Area2D) -> void:
 	get_tree().reload_current_scene()
+
+
+func _on_restart_area_entered(_area):
+	get_tree().reload_current_scene()

@@ -13,8 +13,10 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	#pass
+	
+	print(NoCreation)
 	
 	_platformcloning()
 	_implementCollider()
@@ -32,8 +34,8 @@ func _implementCollider():
 
 
 
-func _on_no_creation_area_area_entered(area):
+func _on_no_creation_area_area_entered(_area):
 	NoCreation = true
 
-func _on_no_creation_area_area_exited(area):
+func _on_no_creation_area_area_exited(_area):
 	NoCreation = false
