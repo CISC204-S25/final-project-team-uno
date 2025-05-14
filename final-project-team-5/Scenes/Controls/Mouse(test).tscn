@@ -12,7 +12,6 @@ platform = ExtResource("2_vxlyr")
 MouseCollider = NodePath("MouseCollider")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
 texture = ExtResource("3_06iou")
 
 [node name="MouseCollider" type="Area2D" parent="."]

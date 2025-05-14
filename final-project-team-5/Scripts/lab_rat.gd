@@ -23,7 +23,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = lerp(velocity.x, dir * speed, acceleration)
 	else:
 		velocity.x = lerp(velocity.x, 0.0, friction)
-		
+	
+	if dir<0:
+		$Sprite2D.flip_h = false
+	elif dir>0:
+		$Sprite2D.flip_h = true
 	
 	move_and_slide()
 	
