@@ -1,3 +1,31 @@
-[gd_scene format=3 uid="uid://ducdw1i7ifhdl"]
+[gd_scene load_steps=5 format=3 uid="uid://ducdw1i7ifhdl"]
+
+[ext_resource type="Texture2D" uid="uid://c52q6pbjs5goq" path="res://Assets/Art/Background/IMG_2413.png" id="1_gj7jd"]
+[ext_resource type="Texture2D" uid="uid://cciju1soxdtq3" path="res://Assets/Art/Background/IMG_2414.png" id="2_3tgw7"]
+[ext_resource type="Texture2D" uid="uid://b65ihyf6yv56t" path="res://Assets/Art/Background/IMG_2416.png" id="3_vsehv"]
+[ext_resource type="Texture2D" uid="uid://dwy5jt2rweuuy" path="res://Assets/Art/Background/IMG_2415.png" id="4_pyd0y"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="backgrounds" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="backgrounds"]
+position = Vector2(640, 360)
+texture = ExtResource("1_gj7jd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="backgrounds"]
+visible = false
+position = Vector2(640, 360)
+texture = ExtResource("2_3tgw7")
+
+[node name="Sprite2D3" type="Sprite2D" parent="backgrounds"]
+visible = false
+position = Vector2(640, 360)
+texture = ExtResource("3_vsehv")
+
+[node name="Sprite2D4" type="Sprite2D" parent="backgrounds"]
+visible = false
+position = Vector2(640, 360)
+texture = ExtResource("4_pyd0y")
+
+[node name="Node" type="Node" parent="."]

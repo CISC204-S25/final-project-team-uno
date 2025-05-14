@@ -14,10 +14,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	#pass
+	pass
 	
-	print(NoCreation)
-	
+	#print(NoCreation)
+func _physics_process(_delta):
 	_platformcloning()
 	_implementCollider()
 

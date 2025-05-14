@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=3 uid="uid://bmbqkn1lmnp3t"]
+
+[ext_resource type="Texture2D" uid="uid://c52q6pbjs5goq" path="res://Assets/Art/Background/IMG_2413.png" id="1_1jjsc"]
+[ext_resource type="Texture2D" uid="uid://cciju1soxdtq3" path="res://Assets/Art/Background/IMG_2414.png" id="2_h6wqn"]
+[ext_resource type="Texture2D" uid="uid://b65ihyf6yv56t" path="res://Assets/Art/Background/IMG_2416.png" id="3_4p3xm"]
+[ext_resource type="Texture2D" uid="uid://dwy5jt2rweuuy" path="res://Assets/Art/Background/IMG_2415.png" id="4_kdovw"]
+[ext_resource type="PackedScene" uid="uid://qcvq23wx47yq" path="res://Scenes/Player Driven (placeholder name)/Lab_rat(Duplicated-different_test).tscn" id="5_xd25y"]
+[ext_resource type="PackedScene" uid="uid://dfucaseofrsl2" path="res://Scenes/Player Driven (placeholder name)/Created Platform.tscn" id="6_agblk"]
+[ext_resource type="Script" path="res://Scripts/Globals/global_platform_organizing.gd" id="7_s2dx5"]
+[ext_resource type="PackedScene" uid="uid://ceyp7ov5d8n1" path="res://Scenes/Controls/Mouse(test).tscn" id="8_o4jy7"]
+[ext_resource type="PackedScene" uid="uid://bghihldvt834d" path="res://Scenes/Controls/CameraManager.tscn" id="9_oxrpm"]
+[ext_resource type="PackedScene" uid="uid://cv3n6nhbgk5y2" path="res://Scenes/UI/platforms_ui.tscn" id="10_gwfxx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ps1r"]
+size = Vector2(20, 20.6191)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="backgrounds" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="backgrounds"]
+position = Vector2(640, 360)
+texture = ExtResource("1_1jjsc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="backgrounds"]
+visible = false
+position = Vector2(640, 360)
+texture = ExtResource("2_h6wqn")
+
+[node name="Sprite2D3" type="Sprite2D" parent="backgrounds"]
+visible = false
+position = Vector2(640, 360)
+texture = ExtResource("3_4p3xm")
+
+[node name="Sprite2D4" type="Sprite2D" parent="backgrounds"]
+visible = false
+position = Vector2(640, 360)
+texture = ExtResource("4_kdovw")
+
+[node name="lab_rat" parent="." instance=ExtResource("5_xd25y")]
+position = Vector2(296, 488)
+scale = Vector2(0.45, 0.45)
+
+[node name="FollowPlayerCamera" type="Camera2D" parent="lab_rat"]
+unique_name_in_owner = true
+zoom = Vector2(2.265, 2.265)
+
+[node name="SceneCamera" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(616, 368)
+scale = Vector2(0.45, 0.45)
+
+[node name="CreatedPlatforms" parent="." instance=ExtResource("6_agblk")]
+position = Vector2(0, -104)
+
+[node name="MoveCreatedPlatform (Global Script)" type="Node" parent="."]
+script = ExtResource("7_s2dx5")
+
+[node name="Mouse" parent="." instance=ExtResource("8_o4jy7")]
+
+[node name="CameraManager" parent="." instance=ExtResource("9_oxrpm")]
+position = Vector2(576, 324)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Platforms_UI" parent="CanvasLayer" instance=ExtResource("10_gwfxx")]
+offset_top = 8.0
+offset_bottom = 8.0
+
+[node name="NoCreationArea" type="Area2D" parent="CanvasLayer/Platforms_UI"]
+position = Vector2(0, -8)
+scale = Vector2(1, 1.4)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Platforms_UI/NoCreationArea"]
+position = Vector2(112, 31.9286)
+scale = Vector2(12, 3)
+shape = SubResource("RectangleShape2D_6ps1r")
