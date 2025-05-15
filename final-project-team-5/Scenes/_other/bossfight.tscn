@@ -7,8 +7,8 @@ resource_name = "bossfight"
 script/source = "extends CharacterBody2D
 
 @onready var Bossfight = get_tree().get_root().get_node(\"Bossfight\")
-@export var projectile: PackedScene
-hp = 4.0
+@onready var projectile = load(\"res://Scenes/_other/projectile.tscn\")
+var hp = 4.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,7 +22,7 @@ func shoot():
 	instance.spawnPOS = global_position
 	instance.spawnROT = rotation
 	#instance.zdex = z_index - 1
-	main.add_child.call_deferred(instance)
+	Bossfight.add_child.call_deferred(instance)
 
 func _on_cooldown_timeout():
 	shoot()
