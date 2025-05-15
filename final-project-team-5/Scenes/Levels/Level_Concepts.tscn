@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bmbqkn1lmnp3t"]
+[gd_scene load_steps=14 format=3 uid="uid://bmbqkn1lmnp3t"]
 
 [ext_resource type="Texture2D" uid="uid://c52q6pbjs5goq" path="res://Assets/Art/Background/IMG_2413.png" id="1_1jjsc"]
 [ext_resource type="Texture2D" uid="uid://cciju1soxdtq3" path="res://Assets/Art/Background/IMG_2414.png" id="2_h6wqn"]
@@ -10,40 +10,51 @@
 [ext_resource type="PackedScene" uid="uid://ceyp7ov5d8n1" path="res://Scenes/Controls/Mouse(test).tscn" id="8_o4jy7"]
 [ext_resource type="PackedScene" uid="uid://bghihldvt834d" path="res://Scenes/Controls/CameraManager.tscn" id="9_oxrpm"]
 [ext_resource type="PackedScene" uid="uid://cv3n6nhbgk5y2" path="res://Scenes/UI/platforms_ui.tscn" id="10_gwfxx"]
+[ext_resource type="Texture2D" uid="uid://wh273422i4vk" path="res://Assets/Art/assets/Platform.png" id="11_2q5cy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ps1r"]
 size = Vector2(20, 20.6191)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1uwx4"]
+size = Vector2(424, 72)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="backgrounds" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="backgrounds"]
+visible = false
 position = Vector2(640, 360)
 texture = ExtResource("1_1jjsc")
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="backgrounds"]
 visible = false
 position = Vector2(640, 360)
 texture = ExtResource("2_h6wqn")
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D3" type="Sprite2D" parent="backgrounds"]
 visible = false
 position = Vector2(640, 360)
 texture = ExtResource("3_4p3xm")
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D4" type="Sprite2D" parent="backgrounds"]
-visible = false
 position = Vector2(640, 360)
 texture = ExtResource("4_kdovw")
+metadata/_edit_lock_ = true
 
 [node name="lab_rat" parent="." instance=ExtResource("5_xd25y")]
-position = Vector2(296, 488)
-scale = Vector2(0.45, 0.45)
+position = Vector2(192, 544)
+scale = Vector2(0.4, 0.4)
+jumpVelocity = -350.0
+friction = 0.15
+gravityPull = 65
 
 [node name="FollowPlayerCamera" type="Camera2D" parent="lab_rat"]
 unique_name_in_owner = true
-zoom = Vector2(2.265, 2.265)
+zoom = Vector2(2.5, 2.5)
 
 [node name="SceneCamera" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -58,14 +69,17 @@ script = ExtResource("7_s2dx5")
 
 [node name="Mouse" parent="." instance=ExtResource("8_o4jy7")]
 
-[node name="CameraManager" parent="." instance=ExtResource("9_oxrpm")]
+[node name="CameraManager" parent="." node_paths=PackedStringArray("FollowPlayerCamera", "SceneCamera") instance=ExtResource("9_oxrpm")]
 position = Vector2(576, 324)
+FollowPlayerCamera = NodePath("../lab_rat/FollowPlayerCamera")
+SceneCamera = NodePath("../SceneCamera")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Platforms_UI" parent="CanvasLayer" instance=ExtResource("10_gwfxx")]
 offset_top = 8.0
 offset_bottom = 8.0
+metadata/_edit_lock_ = true
 
 [node name="NoCreationArea" type="Area2D" parent="CanvasLayer/Platforms_UI"]
 position = Vector2(0, -8)
@@ -77,3 +91,39 @@ collision_mask = 2
 position = Vector2(112, 31.9286)
 scale = Vector2(12, 3)
 shape = SubResource("RectangleShape2D_6ps1r")
+
+[node name="Sections" type="Node2D" parent="."]
+
+[node name="Section1" type="Node2D" parent="Sections"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sections/Section1"]
+position = Vector2(212, 684)
+scale = Vector2(0.85, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sections/Section1/StaticBody2D"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+scale = Vector2(1, 0.915584)
+texture = ExtResource("11_2q5cy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section1/StaticBody2D"]
+visible = false
+scale = Vector2(1.17647, 1)
+shape = SubResource("RectangleShape2D_1uwx4")
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Sections/Section1"]
+position = Vector2(1296, 684)
+scale = Vector2(0.85, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sections/Section1/StaticBody2D2"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+scale = Vector2(1, 0.915584)
+texture = ExtResource("11_2q5cy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section1/StaticBody2D2"]
+visible = false
+scale = Vector2(1.17647, 1)
+shape = SubResource("RectangleShape2D_1uwx4")
+metadata/_edit_lock_ = true
+
+[node name="Platform" type="Node2D" parent="Sections/Section1"]
