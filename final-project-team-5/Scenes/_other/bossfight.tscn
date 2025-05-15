@@ -5,16 +5,27 @@
 [sub_resource type="GDScript" id="GDScript_5e40i"]
 resource_name = "bossfight"
 script/source = "extends CharacterBody2D
+
+@onready var Bossfight = get_tree().get_root().get_node(\"Bossfight\")
+@export var projectile: PackedScene
 hp = 4.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass # Replace with function body.s
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+# Shooting.
+func shoot():
+	var instance = projectile.instantiate()
+	instance.dir = rotation
+	instance.spawnPOS = global_position
+	instance.spawnROT = rotation
+	#instance.zdex = z_index - 1
+	main.add_child.call_deferred(instance)
+
+func _on_cooldown_timeout():
+	shoot()
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ya8d"]
@@ -29,3 +40,5 @@ texture = ExtResource("1_51kce")
 position = Vector2(-32, -138)
 scale = Vector2(-17.9679, 43.1246)
 shape = SubResource("RectangleShape2D_1ya8d")
+
+[node name="FiniteStatemachine" type="Node2D" parent="."]
