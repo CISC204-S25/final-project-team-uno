@@ -4,7 +4,8 @@ extends Node2D
 @export var MouseCollider: Area2D
 
 var target = global_position
-var NoCreation: bool = false
+var NoCreation: bool = false #Disables the ability to create platforms in certain areas...
+	#...or parts of the game
 
 
 # Called when the node enters the scene tree for the first time.

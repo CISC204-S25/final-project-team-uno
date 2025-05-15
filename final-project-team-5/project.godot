@@ -21,6 +21,8 @@ GlobalPlatformOrganizing="*res://Scripts/Globals/global_platform_organizing.gd"
 
 [display]
 
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 mouse_cursor/custom_image="res://Assets/Art/Players/gooberdrone.png"
 mouse_cursor/custom_image_hotspot=Vector2(125, 65)
 
