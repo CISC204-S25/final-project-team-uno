@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://bmbqkn1lmnp3t"]
+[gd_scene load_steps=16 format=3 uid="uid://bmbqkn1lmnp3t"]
 
 [ext_resource type="Texture2D" uid="uid://c52q6pbjs5goq" path="res://Assets/Art/Background/IMG_2413.png" id="1_1jjsc"]
 [ext_resource type="Texture2D" uid="uid://cciju1soxdtq3" path="res://Assets/Art/Background/IMG_2414.png" id="2_h6wqn"]
 [ext_resource type="Texture2D" uid="uid://b65ihyf6yv56t" path="res://Assets/Art/Background/IMG_2416.png" id="3_4p3xm"]
 [ext_resource type="Texture2D" uid="uid://dwy5jt2rweuuy" path="res://Assets/Art/Background/IMG_2415.png" id="4_kdovw"]
+[ext_resource type="Texture2D" uid="uid://cxymmfobhl78v" path="res://Assets/Art/Background/IMG_2473.png" id="5_empe8"]
 [ext_resource type="PackedScene" uid="uid://qcvq23wx47yq" path="res://Scenes/Player Driven (placeholder name)/Lab_rat(Duplicated-different_test).tscn" id="5_xd25y"]
 [ext_resource type="PackedScene" uid="uid://dfucaseofrsl2" path="res://Scenes/Player Driven (placeholder name)/Created Platform.tscn" id="6_agblk"]
 [ext_resource type="Script" path="res://Scripts/Globals/global_platform_organizing.gd" id="7_s2dx5"]
@@ -44,8 +45,14 @@ texture = ExtResource("3_4p3xm")
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D4" type="Sprite2D" parent="backgrounds"]
+visible = false
 position = Vector2(640, 360)
 texture = ExtResource("4_kdovw")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D5" type="Sprite2D" parent="backgrounds"]
+position = Vector2(640, 360)
+texture = ExtResource("5_empe8")
 metadata/_edit_lock_ = true
 
 [node name="lab_rat" parent="." instance=ExtResource("5_xd25y")]

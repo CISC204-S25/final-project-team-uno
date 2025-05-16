@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://degmclo5tnpxy"
-valid=false
+uid="uid://3oaboc3tqqeg"
+path="res://.godot/imported/Boss_fight.png-a07c7f6e35747827777023df48ae20c8.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Assets/Art/Background/Boss_fight.png"
+dest_files=["res://.godot/imported/Boss_fight.png-a07c7f6e35747827777023df48ae20c8.ctex"]
 
 [params]
 
