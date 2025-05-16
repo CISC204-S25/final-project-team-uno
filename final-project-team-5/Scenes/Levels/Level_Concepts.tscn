@@ -138,7 +138,6 @@ scale = Vector2(0.4048, -1.9548)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Restart"]
 position = Vector2(0, 0.517639)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_a7f6b")
 
 [connection signal="area_entered" from="CanvasLayer/Platforms_UI/NoCreationArea" to="Mouse" method="_on_no_creation_area_area_entered"]

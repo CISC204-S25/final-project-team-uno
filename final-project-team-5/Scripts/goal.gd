@@ -1,7 +1,5 @@
 extends Area2D
 
-signal level_complete
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -13,4 +11,7 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	level_complete.emit()
+	# Check if the player entered
+	if body.is_in_group("CharacterBody2D"):
+		# Change to the next scene
+		get_tree().change_scene("res://Scenes/Levels/tutorial_level.tscn")

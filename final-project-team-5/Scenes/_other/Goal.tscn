@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dxf1wi0jpeed3"]
 
-[ext_resource type="Script" path="res://goal.gd" id="1_xyam5"]
-[ext_resource type="PackedScene" uid="uid://b8kv51u3miolj" path="res://Scenes/Player Driven (placeholder name)/Lab_rat.tscn" id="2_up8ya"]
+[ext_resource type="Script" path="res://Scripts/goal.gd" id="1_xyam5"]
+[ext_resource type="PackedScene" uid="uid://qcvq23wx47yq" path="res://Scenes/Player Driven (placeholder name)/Lab_rat(Duplicated-different_test).tscn" id="2_1654y"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_quiw6"]
 
@@ -16,6 +16,7 @@ size = Vector2(100, 132)
 [node name="Node2D" type="Node2D"]
 
 [node name="Platforms" type="Node2D" parent="."]
+position = Vector2(7, 4)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Platforms"]
 collision_layer = 4
@@ -30,16 +31,23 @@ position = Vector2(182, 294)
 shape = SubResource("RectangleShape2D_frjrx")
 
 [node name="goal" type="Area2D" parent="."]
+position = Vector2(319, 216)
 collision_layer = 8
 script = ExtResource("1_xyam5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="goal"]
-position = Vector2(325, 216)
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_oqhqd")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_up8ya")]
-position = Vector2(30, 206)
-scale = Vector2(0.457455, 0.382353)
-jumpVelocity = -250.0
+[node name="lab_rat" parent="." instance=ExtResource("2_1654y")]
+position = Vector2(317, -69.9999)
+scale = Vector2(0.4, 0.4)
+jumpVelocity = -350.0
+friction = 0.15
+gravityPull = 65
+
+[node name="FollowPlayerCamera" type="Camera2D" parent="lab_rat"]
+unique_name_in_owner = true
+zoom = Vector2(2.5, 2.5)
 
 [connection signal="body_entered" from="goal" to="goal" method="_on_body_entered"]

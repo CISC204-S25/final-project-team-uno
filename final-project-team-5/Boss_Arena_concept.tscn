@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://xyfnunbltkix"]
+
+[ext_resource type="Texture2D" uid="uid://wh273422i4vk" path="res://Assets/Art/assets/Platform.png" id="1_hgv4l"]
+[ext_resource type="PackedScene" uid="uid://qcvq23wx47yq" path="res://Scenes/Player Driven (placeholder name)/Lab_rat(Duplicated-different_test).tscn" id="2_tc6io"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u35qs"]
+size = Vector2(424, 72)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(627, 667)
+scale = Vector2(2.49681, 0.574261)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+scale = Vector2(1, 0.915584)
+texture = ExtResource("1_hgv4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+scale = Vector2(1.17647, 1)
+shape = SubResource("RectangleShape2D_u35qs")
+metadata/_edit_lock_ = true
+
+[node name="lab_rat" parent="." instance=ExtResource("2_tc6io")]
+position = Vector2(192, 544)
+scale = Vector2(0.4, 0.4)
+jumpVelocity = -350.0
+friction = 0.15
+gravityPull = 65
+
+[node name="FollowPlayerCamera" type="Camera2D" parent="lab_rat"]
+unique_name_in_owner = true
+zoom = Vector2(2.5, 2.5)
