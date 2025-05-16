@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cv3n6nhbgk5y2"]
+[gd_scene load_steps=3 format=3 uid="uid://cv3n6nhbgk5y2"]
 
 [ext_resource type="Script" path="res://Scripts/platforms_ui_script.gd" id="1_nqlhc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j1dcg"]
 
 [node name="Platforms_UI" type="Control"]
 layout_mode = 3
@@ -11,18 +13,27 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nqlhc")
 
-[node name="Platforms" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 240.0
+offset_right = 235.0
 offset_bottom = 64.0
 
-[node name="Standard Platform" type="Button" parent="Platforms"]
+[node name="Platforms" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Standard Platform" type="Button" parent="HBoxContainer/Platforms"]
 layout_mode = 2
 text = "   Standard   "
 
-[node name="Moving Platform" type="Button" parent="Platforms"]
+[node name="Moving Platform" type="Button" parent="HBoxContainer/Platforms"]
 layout_mode = 2
 text = "   Moving (➡️)  "
 
-[connection signal="pressed" from="Platforms/Standard Platform" to="." method="_on_standard_platform_pressed"]
-[connection signal="pressed" from="Platforms/Moving Platform" to="." method="_on_moving_platform_pressed"]
+[node name="PlatformLimitLabel" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "[00 | Platform Limit]"
+label_settings = SubResource("LabelSettings_j1dcg")
+
+[connection signal="pressed" from="HBoxContainer/Platforms/Standard Platform" to="." method="_on_standard_platform_pressed"]
+[connection signal="pressed" from="HBoxContainer/Platforms/Moving Platform" to="." method="_on_moving_platform_pressed"]

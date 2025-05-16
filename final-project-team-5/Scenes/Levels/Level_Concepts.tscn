@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bmbqkn1lmnp3t"]
+[gd_scene load_steps=15 format=3 uid="uid://bmbqkn1lmnp3t"]
 
 [ext_resource type="Texture2D" uid="uid://c52q6pbjs5goq" path="res://Assets/Art/Background/IMG_2413.png" id="1_1jjsc"]
 [ext_resource type="Texture2D" uid="uid://cciju1soxdtq3" path="res://Assets/Art/Background/IMG_2414.png" id="2_h6wqn"]
@@ -18,7 +18,10 @@ size = Vector2(20, 20.6191)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1uwx4"]
 size = Vector2(424, 72)
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7f6b"]
+size = Vector2(138, 457)
+
+[node name="Levels" type="Node2D"]
 
 [node name="backgrounds" type="Node2D" parent="."]
 
@@ -127,3 +130,17 @@ shape = SubResource("RectangleShape2D_1uwx4")
 metadata/_edit_lock_ = true
 
 [node name="Platform" type="Node2D" parent="Sections/Section1"]
+
+[node name="Restart" type="Area2D" parent="."]
+position = Vector2(720, 864)
+rotation = 1.5708
+scale = Vector2(0.4048, -1.9548)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Restart"]
+position = Vector2(0, 0.517639)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_a7f6b")
+
+[connection signal="area_entered" from="CanvasLayer/Platforms_UI/NoCreationArea" to="Mouse" method="_on_no_creation_area_area_entered"]
+[connection signal="area_exited" from="CanvasLayer/Platforms_UI/NoCreationArea" to="Mouse" method="_on_no_creation_area_area_exited"]
+[connection signal="area_entered" from="Restart" to="lab_rat" method="_on_restart_area_entered"]

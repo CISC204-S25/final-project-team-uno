@@ -35,6 +35,7 @@ func _process(_delta):
 		moving_platform = false
 
 func _on_platform_duration_timeout(): #Timer for how long the platform appears
+	GlobalPlatformOrganizing.PlatformLimit += 1 #adds an int for another platform to be created
 	queue_free() #when time is up, the platform is deleted
 
 

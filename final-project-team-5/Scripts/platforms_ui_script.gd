@@ -1,6 +1,8 @@
 extends Control
 #Uses GlobalPlatformOrganizer
 
+@onready var PlatformLimit = %PlatformLimitLabel
+
 signal MovingPlatformOn
 signal MovingPlatformOff
 
@@ -18,6 +20,8 @@ func _process(_delta):
 		MovingPlatformOn.emit()
 	else:
 		MovingPlatformOff.emit()
+	
+	PlatformLimit.text = str(GlobalPlatformOrganizing.PlatformLimit)
 
 
 

@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalPlatformOrganizing="*res://Scripts/Globals/global_platform_organizing.gd"
+GlobalCameraManager="*res://Scripts/Globals/global_camera_manager.gd"
 
 [display]
 

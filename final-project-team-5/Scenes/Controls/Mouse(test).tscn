@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ceyp7ov5d8n1"]
+[gd_scene load_steps=6 format=3 uid="uid://ceyp7ov5d8n1"]
 
 [ext_resource type="Script" path="res://Scripts/mouse_script.gd" id="1_lq2nf"]
 [ext_resource type="PackedScene" uid="uid://dfucaseofrsl2" path="res://Scenes/Player Driven (placeholder name)/Created Platform.tscn" id="2_vxlyr"]
 [ext_resource type="Texture2D" uid="uid://bdc5jqg22qx3g" path="res://Assets/Art/Players/gooberdrone.png" id="3_06iou"]
+[ext_resource type="Texture2D" uid="uid://6y27xykjrjgk" path="res://Assets/Art/Players/gooberdrone_small.png" id="4_yufuk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cndw4"]
 
@@ -12,8 +13,10 @@ platform = ExtResource("2_vxlyr")
 MouseCollider = NodePath("MouseCollider")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
 texture = ExtResource("3_06iou")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("4_yufuk")
 
 [node name="MouseCollider" type="Area2D" parent="."]
 collision_layer = 2
