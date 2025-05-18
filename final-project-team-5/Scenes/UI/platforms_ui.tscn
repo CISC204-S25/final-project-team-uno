@@ -3,6 +3,9 @@
 [ext_resource type="Script" path="res://Scripts/platforms_ui_script.gd" id="1_nqlhc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_j1dcg"]
+font_color = Color(0, 1, 1, 1)
+outline_size = 5
+outline_color = Color(0.435192, 0.435192, 0.435192, 1)
 
 [node name="Platforms_UI" type="Control"]
 layout_mode = 3
@@ -18,22 +21,8 @@ layout_mode = 0
 offset_right = 235.0
 offset_bottom = 64.0
 
-[node name="Platforms" type="HBoxContainer" parent="HBoxContainer"]
-layout_mode = 2
-
-[node name="Standard Platform" type="Button" parent="HBoxContainer/Platforms"]
-layout_mode = 2
-text = "   Standard   "
-
-[node name="Moving Platform" type="Button" parent="HBoxContainer/Platforms"]
-layout_mode = 2
-text = "   Moving (➡️)  "
-
 [node name="PlatformLimitLabel" type="Label" parent="HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "[00 | Platform Limit]"
 label_settings = SubResource("LabelSettings_j1dcg")
-
-[connection signal="pressed" from="HBoxContainer/Platforms/Standard Platform" to="." method="_on_standard_platform_pressed"]
-[connection signal="pressed" from="HBoxContainer/Platforms/Moving Platform" to="." method="_on_moving_platform_pressed"]

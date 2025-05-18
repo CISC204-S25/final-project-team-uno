@@ -6,7 +6,6 @@ extends Control
 signal MovingPlatformOn
 signal MovingPlatformOff
 
-signal NoCreatingPlatforms
 
 var move_platform: bool = true
 # Called when the node enters the scene tree for the first time.
