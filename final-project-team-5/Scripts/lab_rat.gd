@@ -37,9 +37,9 @@ func _physics_process(delta: float) -> void:
 
 func _on_death_block_area_entered(_area: Area2D) -> void:
 	get_tree().reload_current_scene()
-	GlobalPlatformOrganizing.PlatformLimit = 3 #restarts platform limit after death
+	GlobalPlatformOrganizing.PlatformLimit = 2 #restarts platform limit after death
 
 
 func _on_restart_area_entered(_area):
 	get_tree().reload_current_scene()
-	GlobalPlatformOrganizing.PlatformLimit = 3 #restarts platform limit after restart
+	GlobalPlatformOrganizing.PlatformLimit = 2 #restarts platform limit after restart

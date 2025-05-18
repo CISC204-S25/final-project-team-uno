@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://di4vicm4mq37n"]
 
-[ext_resource type="PackedScene" uid="uid://b8kv51u3miolj" path="res://Scenes/Player Driven (placeholder name)/Lab_rat.tscn" id="1_qc1lq"]
+[ext_resource type="PackedScene" uid="uid://b8kv51u3miolj" path="res://Scenes/Player Driven (placeholder name)/Lab_rat.tscn" id="1_h4nvk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p5fg2"]
 
@@ -12,7 +12,7 @@ size = Vector2(138, 457)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_qc1lq")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_h4nvk")]
 position = Vector2(258, 325)
 
 [node name="Platforms" type="Node2D" parent="."]
