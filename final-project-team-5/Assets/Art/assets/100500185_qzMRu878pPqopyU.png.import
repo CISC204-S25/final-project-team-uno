@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1i71jgyndjbs"
-path="res://.godot/imported/Boss_fight_with_light.png-cee198bb3629059e85fce8d6872c7f40.ctex"
+uid="uid://bk48cmuxbfya"
+path="res://.godot/imported/100500185_qzMRu878pPqopyU.png-04a0d2d0769359029a3e0b3e3303bdd0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Background/Boss_fight_with_light.png"
-dest_files=["res://.godot/imported/Boss_fight_with_light.png-cee198bb3629059e85fce8d6872c7f40.ctex"]
+source_file="res://Assets/Art/assets/100500185_qzMRu878pPqopyU.png"
+dest_files=["res://.godot/imported/100500185_qzMRu878pPqopyU.png-04a0d2d0769359029a3e0b3e3303bdd0.ctex"]
 
 [params]
 

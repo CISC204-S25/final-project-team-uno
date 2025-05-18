@@ -16,7 +16,7 @@ func _process(_delta):
 
 
 func ExceedingPlatformLimit():
-	if PlatformLimit >= 3:
-		PlatformLimit = 3
+	if PlatformLimit >= 2:
+		PlatformLimit = 2
 	if PlatformLimit <= 0:
 		PlatformLimit = 0
