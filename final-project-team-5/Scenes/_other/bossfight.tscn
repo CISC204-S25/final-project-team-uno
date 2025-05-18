@@ -24,6 +24,9 @@ func shoot():
 	#instance.zdex = z_index - 1
 	Bossfight.add_child.call_deferred(instance)
 
+func _on_timer_timeout() -> void:
+	shoot()
+
 func _on_cooldown_timeout():
 	shoot()
 "
@@ -42,3 +45,8 @@ scale = Vector2(-17.9679, 43.1246)
 shape = SubResource("RectangleShape2D_1ya8d")
 
 [node name="FiniteStatemachine" type="Node2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 7.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
