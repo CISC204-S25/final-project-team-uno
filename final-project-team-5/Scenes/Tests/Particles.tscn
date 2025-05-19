@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtpc8fyxxen3a"]
+[gd_scene load_steps=3 format=3 uid="uid://dtpc8fyxxen3a"]
+
+[ext_resource type="Texture2D" uid="uid://bk48cmuxbfya" path="res://Assets/Art/assets/100500185_qzMRu878pPqopyU.png" id="1_7anhs"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_oefj8"]
 particle_flag_disable_z = true
@@ -8,12 +10,15 @@ gravity = Vector3(0, 98, 0)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 self_modulate = Color(0.440214, 0.998843, 0.772056, 1)
-amount = 10
+scale = Vector2(0.03, 0.03)
+amount = 6
 process_material = SubResource("ParticleProcessMaterial_oefj8")
-lifetime = 2.0
+texture = ExtResource("1_7anhs")
+lifetime = 5.0
 preprocess = 145.45
 speed_scale = 6.67
 explosiveness = 0.21
 randomness = 0.37
 collision_base_size = 54.2
 local_coords = true
+trail_lifetime = 4.84
