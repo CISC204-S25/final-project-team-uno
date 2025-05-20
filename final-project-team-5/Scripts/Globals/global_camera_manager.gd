@@ -1,10 +1,17 @@
 extends Node
-#NOTE: DO NOT DELETE THIS NODE YET
+#NOTE: THIS SCRIPT IS BEING USED
 #var tween: Tween
 #var camera2D: Camera2D
 #var transition: bool
 
 var current_camera: int
+var camera_location: int
+
+var buddy_teleporting: bool
+#@export var SceneCamera: Camera2D
+#@export var CameraMarkerArray = []
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
