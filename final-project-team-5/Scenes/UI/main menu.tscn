@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dyryt3kh0yckn"]
 
-[ext_resource type="Script" uid="uid://6ua3n4h2ohhb" path="res://exit.gd" id="1_7mewq"]
+[ext_resource type="Script" path="res://Scripts/exit.gd" id="1_7mewq"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -48,3 +48,5 @@ offset_right = 713.0
 offset_bottom = 359.0
 text = "Exit"
 script = ExtResource("1_7mewq")
+
+[connection signal="pressed" from="Exit" to="Exit" method="_on_Button_pressed"]

@@ -621,7 +621,7 @@ debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
 [node name="Platform2" type="StaticBody2D" parent="Sections/Section4/Platforms"]
-position = Vector2(56, 304)
+position = Vector2(72, 304)
 scale = Vector2(0.35, 0.35)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section4/Platforms/Platform2"]
@@ -1776,12 +1776,10 @@ position = Vector2(159, 45)
 
 [node name="Hazards" type="Node2D" parent="Sections/Section7/Maze"]
 
-[node name="Spikes" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(24, 75)
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes"]
 texture = ExtResource("14_bdanr")
@@ -1800,12 +1798,10 @@ scale = Vector2(264.21, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes7" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes7" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(800, 91)
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes7"]
 texture = ExtResource("14_bdanr")
@@ -1816,13 +1812,11 @@ scale = Vector2(76.21, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes19" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes19" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(801, 155)
 rotation = 3.14159
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes19"]
 texture = ExtResource("14_bdanr")
@@ -1833,12 +1827,10 @@ scale = Vector2(76.21, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes6" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes6" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(752, 219)
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes6"]
 texture = ExtResource("14_bdanr")
@@ -1865,12 +1857,10 @@ scale = Vector2(477.543, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes5" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes5" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(336, 187)
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes5"]
 texture = ExtResource("14_bdanr")
@@ -1905,12 +1895,10 @@ scale = Vector2(670.877, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes4" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes4" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(200, 217)
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes4"]
 texture = ExtResource("14_bdanr")
@@ -1929,12 +1917,10 @@ scale = Vector2(264.21, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes3" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes3" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(280, 75)
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes3"]
 texture = ExtResource("14_bdanr")
@@ -1957,13 +1943,11 @@ scale = Vector2(336.21, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes10" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes10" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(184, 131)
 rotation = 1.57079
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes10"]
 texture = ExtResource("14_bdanr")
@@ -1978,13 +1962,11 @@ scale = Vector2(210.877, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes11" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes11" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(472, 43)
 rotation = 1.57079
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes11"]
 texture = ExtResource("14_bdanr")
@@ -1999,13 +1981,11 @@ scale = Vector2(190.333, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes12" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes12" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(544, 91)
 rotation = -1.57079
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes12"]
 texture = ExtResource("14_bdanr")
@@ -2020,13 +2000,11 @@ scale = Vector2(190.333, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes17" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes17" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(920, 91)
 rotation = -1.57079
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes17"]
 texture = ExtResource("14_bdanr")
@@ -2049,13 +2027,11 @@ scale = Vector2(382.333, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes15" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes15" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(248, 107)
 rotation = -1.57079
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes15"]
 position = Vector2(0, 0.00292969)
@@ -2066,13 +2042,11 @@ scale = Vector2(99.6658, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes16" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes16" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(760, 123)
 rotation = -1.57079
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes16"]
 position = Vector2(0, 0.00292969)
@@ -2083,13 +2057,11 @@ scale = Vector2(99.6658, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes18" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes18" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(840, 123)
 rotation = 1.57079
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes18"]
 position = Vector2(0, 0.00292969)
@@ -2100,13 +2072,11 @@ scale = Vector2(99.6658, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes2" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes2" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(24, 11)
 rotation = -3.14159
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes2"]
 texture = ExtResource("14_bdanr")
@@ -2149,13 +2119,11 @@ scale = Vector2(855.725, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes13" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes13" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(280, 123)
 rotation = -3.14159
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes13"]
 texture = ExtResource("14_bdanr")
@@ -2178,13 +2146,11 @@ scale = Vector2(359.458, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes14" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes14" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(576, 123)
 rotation = -3.14159
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes14"]
 texture = ExtResource("14_bdanr")
@@ -2207,13 +2173,11 @@ scale = Vector2(359.458, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes9" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes9" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(480, 11)
 rotation = -3.14159
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes9"]
 texture = ExtResource("14_bdanr")
@@ -2228,13 +2192,11 @@ scale = Vector2(178.391, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes8" type="Area2D" parent="Sections/Section7/Maze/Hazards"]
+[node name="Spikes8" type="Node2D" parent="Sections/Section7/Maze/Hazards"]
 editor_description = "For spikes"
 position = Vector2(608, 11)
 rotation = -3.14159
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes8"]
 texture = ExtResource("14_bdanr")
@@ -2857,12 +2819,10 @@ metadata/_edit_lock_ = true
 [node name="Hazards" type="Node2D" parent="Sections/Section8"]
 position = Vector2(-1271, 0)
 
-[node name="Spikes" type="Area2D" parent="Sections/Section8/Hazards"]
+[node name="Spikes" type="Node2D" parent="Sections/Section8/Hazards"]
 editor_description = "For spikes"
 position = Vector2(1440, 624)
 scale = Vector2(0.075, 0.075)
-collision_layer = 3
-collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes"]
 texture = ExtResource("14_bdanr")
@@ -2873,12 +2833,12 @@ scale = Vector2(60.21, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes2" type="Area2D" parent="Sections/Section8/Hazards"]
+[node name="Node2D" type="Node2D" parent="Sections/Section8/Hazards/Spikes"]
+
+[node name="Spikes2" type="Node2D" parent="Sections/Section8/Hazards"]
 editor_description = "For spikes"
 position = Vector2(1639, 568)
 scale = Vector2(0.05, 0.05)
-collision_layer = 3
-collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes2"]
 texture = ExtResource("14_bdanr")
@@ -2889,12 +2849,10 @@ scale = Vector2(60.21, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes7" type="Area2D" parent="Sections/Section8/Hazards"]
+[node name="Spikes7" type="Node2D" parent="Sections/Section8/Hazards"]
 editor_description = "For spikes"
 position = Vector2(1911, 568)
 scale = Vector2(0.05, 0.05)
-collision_layer = 3
-collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes7"]
 texture = ExtResource("14_bdanr")
@@ -2905,13 +2863,11 @@ scale = Vector2(60.21, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes3" type="Area2D" parent="Sections/Section8/Hazards"]
+[node name="Spikes3" type="Node2D" parent="Sections/Section8/Hazards"]
 editor_description = "For spikes"
 position = Vector2(1639, 376)
 rotation = -3.14159
 scale = Vector2(0.05, 0.05)
-collision_layer = 3
-collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes3"]
 texture = ExtResource("14_bdanr")
@@ -2922,13 +2878,11 @@ scale = Vector2(60.21, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes4" type="Area2D" parent="Sections/Section8/Hazards"]
+[node name="Spikes4" type="Node2D" parent="Sections/Section8/Hazards"]
 editor_description = "For spikes"
 position = Vector2(1639, 184)
 rotation = -6.28318
 scale = Vector2(0.05, 0.05)
-collision_layer = 3
-collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes4"]
 texture = ExtResource("14_bdanr")
@@ -2939,13 +2893,11 @@ scale = Vector2(60.21, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes8" type="Area2D" parent="Sections/Section8/Hazards"]
+[node name="Spikes8" type="Node2D" parent="Sections/Section8/Hazards"]
 editor_description = "For spikes"
 position = Vector2(1719, 272)
 rotation = -6.28318
 scale = Vector2(0.05, 0.05)
-collision_layer = 3
-collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes8"]
 texture = ExtResource("14_bdanr")
@@ -2956,13 +2908,11 @@ scale = Vector2(60.21, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes9" type="Area2D" parent="Sections/Section8/Hazards"]
+[node name="Spikes9" type="Node2D" parent="Sections/Section8/Hazards"]
 editor_description = "For spikes"
 position = Vector2(1831, 272)
 rotation = -6.28318
 scale = Vector2(0.05, 0.05)
-collision_layer = 3
-collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes9"]
 texture = ExtResource("14_bdanr")
@@ -2973,13 +2923,11 @@ scale = Vector2(60.21, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes5" type="Area2D" parent="Sections/Section8/Hazards"]
+[node name="Spikes5" type="Node2D" parent="Sections/Section8/Hazards"]
 editor_description = "For spikes"
 position = Vector2(1911, 376)
 rotation = -3.14159
 scale = Vector2(0.05, 0.05)
-collision_layer = 3
-collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes5"]
 texture = ExtResource("14_bdanr")
@@ -2990,13 +2938,11 @@ scale = Vector2(60.21, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes6" type="Area2D" parent="Sections/Section8/Hazards"]
+[node name="Spikes6" type="Node2D" parent="Sections/Section8/Hazards"]
 editor_description = "For spikes"
 position = Vector2(1911, 184)
 rotation = -6.28318
 scale = Vector2(0.05, 0.05)
-collision_layer = 3
-collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes6"]
 texture = ExtResource("14_bdanr")
@@ -3188,13 +3134,11 @@ metadata/_edit_lock_ = true
 [node name="Hazards" type="Node2D" parent="Sections/Section9"]
 position = Vector2(512, 262)
 
-[node name="Spikes" type="Area2D" parent="Sections/Section9/Hazards"]
+[node name="Spikes" type="Node2D" parent="Sections/Section9/Hazards"]
 editor_description = "For spikes"
 position = Vector2(-144, 117)
 rotation = -3.14159
 scale = Vector2(0.05, 0.05)
-collision_layer = 3
-collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Hazards/Spikes"]
 texture = ExtResource("14_bdanr")
@@ -3205,12 +3149,10 @@ scale = Vector2(60.21, 25)
 shape = SubResource("RectangleShape2D_tmn2u")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes2" type="Area2D" parent="Sections/Section9/Hazards"]
+[node name="Spikes2" type="Node2D" parent="Sections/Section9/Hazards"]
 editor_description = "For spikes"
 position = Vector2(-144, -75)
 scale = Vector2(0.05, 0.05)
-collision_layer = 3
-collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Hazards/Spikes2"]
 texture = ExtResource("14_bdanr")
@@ -3221,13 +3163,11 @@ scale = Vector2(60.21, 25)
 shape = SubResource("RectangleShape2D_tmn2u")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes3" type="Area2D" parent="Sections/Section9/Hazards"]
+[node name="Spikes3" type="Node2D" parent="Sections/Section9/Hazards"]
 editor_description = "For spikes"
 position = Vector2(280, 204)
 rotation = -3.14159
 scale = Vector2(0.05, 0.05)
-collision_layer = 3
-collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Hazards/Spikes3"]
 texture = ExtResource("14_bdanr")
@@ -3238,12 +3178,10 @@ scale = Vector2(60.21, 25)
 shape = SubResource("RectangleShape2D_tmn2u")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes4" type="Area2D" parent="Sections/Section9/Hazards"]
+[node name="Spikes4" type="Node2D" parent="Sections/Section9/Hazards"]
 editor_description = "For spikes"
 position = Vector2(280, 12)
 scale = Vector2(0.05, 0.05)
-collision_layer = 3
-collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Hazards/Spikes4"]
 texture = ExtResource("14_bdanr")
@@ -3254,13 +3192,11 @@ scale = Vector2(60.21, 25)
 shape = SubResource("RectangleShape2D_tmn2u")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes13" type="Area2D" parent="Sections/Section9/Hazards"]
+[node name="Spikes13" type="Node2D" parent="Sections/Section9/Hazards"]
 editor_description = "For spikes"
 position = Vector2(352, 130)
 rotation = -3.14159
 scale = Vector2(0.03, 0.03)
-collision_layer = 3
-collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Hazards/Spikes13"]
 texture = ExtResource("14_bdanr")
@@ -3305,13 +3241,11 @@ shape = SubResource("RectangleShape2D_r3lcl")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
-[node name="Spikes5" type="Area2D" parent="Sections/Section9"]
+[node name="Spikes5" type="Node2D" parent="Sections/Section9"]
 editor_description = "For spikes"
 position = Vector2(736, 408)
 rotation = -1.57079
 scale = Vector2(0.05, 0.05)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Spikes5"]
 texture = ExtResource("14_bdanr")
@@ -3326,13 +3260,11 @@ scale = Vector2(190.333, 25)
 shape = SubResource("RectangleShape2D_tmn2u")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
-[node name="Spikes6" type="Area2D" parent="Sections/Section9"]
+[node name="Spikes6" type="Node2D" parent="Sections/Section9"]
 editor_description = "For spikes"
 position = Vector2(312, 320)
 rotation = -1.57079
 scale = Vector2(0.05, 0.05)
-collision_layer = 3
-collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Spikes6"]
 texture = ExtResource("14_bdanr")

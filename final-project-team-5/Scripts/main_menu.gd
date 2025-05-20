@@ -5,4 +5,5 @@ func _ready():
 	button.pressed.connect(_button_pressed)
 	add_child(button)
 
-func _button_pressed(): get_tree().reload_scene("main menu")
+func _button_pressed():
+	get_tree().change_scene_to_file("res://Scenes/UI/main menu.tscn")

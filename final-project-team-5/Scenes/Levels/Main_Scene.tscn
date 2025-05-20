@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ducdw1i7ifhdl"]
+[gd_scene load_steps=19 format=3 uid="uid://ducdw1i7ifhdl"]
 
 [ext_resource type="Texture2D" uid="uid://c52q6pbjs5goq" path="res://Assets/Art/Background/IMG_2413.png" id="1_gj7jd"]
 [ext_resource type="Texture2D" uid="uid://cciju1soxdtq3" path="res://Assets/Art/Background/IMG_2414.png" id="2_3tgw7"]
@@ -17,12 +17,22 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k25q7"]
 size = Vector2(138, 457)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yl3sf"]
+size = Vector2(15.8035, 25.2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b510v"]
+size = Vector2(15.8035, 25.2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_emv06"]
+size = Vector2(15.8035, 25.2)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lg3an"]
 size = Vector2(30, 658)
 
 [node name="Main" type="Node2D"]
 
 [node name="backgrounds" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="StandardBackground" type="Node2D" parent="backgrounds"]
 visible = false
@@ -103,6 +113,490 @@ shape = SubResource("RectangleShape2D_k25q7")
 debug_color = Color(0.999102, 0, 0.123544, 0.42)
 
 [node name="Levels" parent="." instance=ExtResource("6_5kygh")]
+
+[node name="Hazards" type="Node2D" parent="Levels"]
+
+[node name="Section 7" type="Node2D" parent="Levels/Hazards"]
+
+[node name="Spikes" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(7671, 120)
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes"]
+position = Vector2(1645.62, -0.000244141)
+scale = Vector2(264.21, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes7" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(8447, 136)
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes7"]
+position = Vector2(-0.000854492, -0.000244141)
+scale = Vector2(76.21, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes19" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(8448, 200)
+rotation = 3.14159
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes19"]
+position = Vector2(-0.000854492, -0.000244141)
+scale = Vector2(76.21, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes6" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(8399, 264)
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes6"]
+position = Vector2(1645.62, -0.000244141)
+scale = Vector2(477.543, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes5" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(7983, 232)
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes5"]
+position = Vector2(4800, -0.000244141)
+scale = Vector2(670.877, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes4" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(7847, 262)
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes4"]
+position = Vector2(1645.62, -0.000244141)
+scale = Vector2(264.21, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes3" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(7927, 120)
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes3"]
+position = Vector2(2133.33, -0.000244141)
+scale = Vector2(336.21, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes10" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(7831, 176)
+rotation = 1.57079
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes10"]
+position = Vector2(800, 0.00194653)
+scale = Vector2(210.877, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes11" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(8119, 88)
+rotation = 1.57079
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes11"]
+position = Vector2(766.667, 0.00187249)
+scale = Vector2(190.333, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes12" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(8191, 136)
+rotation = -1.57079
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes12"]
+position = Vector2(766.667, 0.00187249)
+scale = Vector2(190.333, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes17" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(8567, 136)
+rotation = -1.57079
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes17"]
+position = Vector2(-800, 0.00128346)
+scale = Vector2(382.333, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes15" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(7895, 152)
+rotation = -1.57079
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes15"]
+scale = Vector2(99.6658, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes16" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(8407, 168)
+rotation = -1.57079
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes16"]
+scale = Vector2(99.6658, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes18" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(8487, 168)
+rotation = 1.57079
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes18"]
+scale = Vector2(99.6658, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes2" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(7671, 56)
+rotation = -3.14159
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes2"]
+position = Vector2(-6400, 0.0284064)
+scale = Vector2(855.725, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes13" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(7927, 168)
+rotation = -3.14159
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes13"]
+position = Vector2(-2133.33, 0.00945156)
+scale = Vector2(359.458, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes14" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(8223, 168)
+rotation = -3.14159
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes14"]
+position = Vector2(-2133.33, 0.00945156)
+scale = Vector2(359.458, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes9" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(8127, 56)
+rotation = -3.14159
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes9"]
+position = Vector2(-800, 0.00352818)
+scale = Vector2(178.391, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes8" type="Area2D" parent="Levels/Hazards/Section 7"]
+editor_description = "For spikes"
+position = Vector2(8255, 56)
+rotation = -3.14159
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 7/Spikes8"]
+position = Vector2(-5066.67, 0.022483)
+scale = Vector2(699.198, 25)
+shape = SubResource("RectangleShape2D_yl3sf")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Section 8" type="Node2D" parent="Levels/Hazards"]
+
+[node name="Spikes" type="Area2D" parent="Levels/Hazards/Section 8"]
+editor_description = "For spikes"
+position = Vector2(8928, 624)
+scale = Vector2(0.075, 0.075)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 8/Spikes"]
+position = Vector2(0.595703, 60)
+scale = Vector2(60.21, 25)
+shape = SubResource("RectangleShape2D_b510v")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes2" type="Area2D" parent="Levels/Hazards/Section 8"]
+editor_description = "For spikes"
+position = Vector2(9127, 568)
+scale = Vector2(0.05, 0.05)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 8/Spikes2"]
+position = Vector2(0.595703, 60)
+scale = Vector2(60.21, 25)
+shape = SubResource("RectangleShape2D_b510v")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes7" type="Area2D" parent="Levels/Hazards/Section 8"]
+editor_description = "For spikes"
+position = Vector2(9399, 568)
+scale = Vector2(0.05, 0.05)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 8/Spikes7"]
+position = Vector2(0.595703, 60)
+scale = Vector2(60.21, 25)
+shape = SubResource("RectangleShape2D_b510v")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes3" type="Area2D" parent="Levels/Hazards/Section 8"]
+editor_description = "For spikes"
+position = Vector2(9127, 376)
+rotation = -3.14159
+scale = Vector2(0.05, 0.05)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 8/Spikes3"]
+position = Vector2(0.595703, 60)
+scale = Vector2(60.21, 25)
+shape = SubResource("RectangleShape2D_b510v")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes4" type="Area2D" parent="Levels/Hazards/Section 8"]
+editor_description = "For spikes"
+position = Vector2(9127, 184)
+rotation = -6.28318
+scale = Vector2(0.05, 0.05)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 8/Spikes4"]
+position = Vector2(0.595703, -4.99927)
+scale = Vector2(60.21, 25)
+shape = SubResource("RectangleShape2D_b510v")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes8" type="Area2D" parent="Levels/Hazards/Section 8"]
+editor_description = "For spikes"
+position = Vector2(9207, 272)
+rotation = -6.28318
+scale = Vector2(0.05, 0.05)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 8/Spikes8"]
+position = Vector2(0.595703, -4.99927)
+scale = Vector2(60.21, 25)
+shape = SubResource("RectangleShape2D_b510v")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes9" type="Area2D" parent="Levels/Hazards/Section 8"]
+editor_description = "For spikes"
+position = Vector2(9319, 272)
+rotation = -6.28318
+scale = Vector2(0.05, 0.05)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 8/Spikes9"]
+position = Vector2(0.595703, -4.99927)
+scale = Vector2(60.21, 25)
+shape = SubResource("RectangleShape2D_b510v")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes5" type="Area2D" parent="Levels/Hazards/Section 8"]
+editor_description = "For spikes"
+position = Vector2(9399, 376)
+rotation = -3.14159
+scale = Vector2(0.05, 0.05)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 8/Spikes5"]
+position = Vector2(0.595703, 60)
+scale = Vector2(60.21, 25)
+shape = SubResource("RectangleShape2D_b510v")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes6" type="Area2D" parent="Levels/Hazards/Section 8"]
+editor_description = "For spikes"
+position = Vector2(9399, 184)
+rotation = -6.28318
+scale = Vector2(0.05, 0.05)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 8/Spikes6"]
+position = Vector2(0.595703, -4.99927)
+scale = Vector2(60.21, 25)
+shape = SubResource("RectangleShape2D_b510v")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Section 9" type="Node2D" parent="Levels/Hazards"]
+
+[node name="Spikes" type="Area2D" parent="Levels/Hazards/Section 9"]
+editor_description = "For spikes"
+position = Vector2(10279, 379)
+rotation = -3.14159
+scale = Vector2(0.05, 0.05)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 9/Spikes"]
+position = Vector2(0.595703, 60)
+scale = Vector2(60.21, 25)
+shape = SubResource("RectangleShape2D_emv06")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes2" type="Area2D" parent="Levels/Hazards/Section 9"]
+editor_description = "For spikes"
+position = Vector2(10279, 187)
+scale = Vector2(0.05, 0.05)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 9/Spikes2"]
+position = Vector2(0.595703, -4.99927)
+scale = Vector2(60.21, 25)
+shape = SubResource("RectangleShape2D_emv06")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes3" type="Area2D" parent="Levels/Hazards/Section 9"]
+editor_description = "For spikes"
+position = Vector2(10703, 466)
+rotation = -3.14159
+scale = Vector2(0.05, 0.05)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 9/Spikes3"]
+position = Vector2(0.595703, 60)
+scale = Vector2(60.21, 25)
+shape = SubResource("RectangleShape2D_emv06")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes4" type="Area2D" parent="Levels/Hazards/Section 9"]
+editor_description = "For spikes"
+position = Vector2(10703, 274)
+scale = Vector2(0.05, 0.05)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 9/Spikes4"]
+position = Vector2(0.595703, -4.99927)
+scale = Vector2(60.21, 25)
+shape = SubResource("RectangleShape2D_emv06")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes13" type="Area2D" parent="Levels/Hazards/Section 9"]
+editor_description = "For spikes"
+position = Vector2(10775, 392)
+rotation = -3.14159
+scale = Vector2(0.03, 0.03)
+collision_layer = 3
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 9/Spikes13"]
+position = Vector2(-2933.33, 0.00741071)
+scale = Vector2(464.791, 25)
+shape = SubResource("RectangleShape2D_emv06")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes5" type="Area2D" parent="Levels/Hazards/Section 9"]
+editor_description = "For spikes"
+position = Vector2(10648, 408)
+rotation = -1.57079
+scale = Vector2(0.05, 0.05)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 9/Spikes5"]
+position = Vector2(766.667, 0.00187249)
+scale = Vector2(190.333, 25)
+shape = SubResource("RectangleShape2D_emv06")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
+
+[node name="Spikes6" type="Area2D" parent="Levels/Hazards/Section 9"]
+editor_description = "For spikes"
+position = Vector2(10224, 320)
+rotation = -1.57079
+scale = Vector2(0.05, 0.05)
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Hazards/Section 9/Spikes6"]
+position = Vector2(766.667, 0.00187249)
+scale = Vector2(190.333, 25)
+shape = SubResource("RectangleShape2D_emv06")
+debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
 [node name="Players" type="Node2D" parent="."]
 
@@ -347,6 +841,41 @@ position = Vector2(8803, 320)
 position = Vector2(9944, 320)
 
 [connection signal="area_entered" from="Restart" to="Players/lab_rat" method="_on_restart_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes7" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes19" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes6" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes5" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes4" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes3" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes10" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes11" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes12" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes17" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes15" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes16" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes18" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes2" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes13" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes14" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes9" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes8" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 8/Spikes" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 8/Spikes2" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 8/Spikes7" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 8/Spikes3" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 8/Spikes4" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 8/Spikes8" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 8/Spikes9" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 8/Spikes5" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 8/Spikes6" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 9/Spikes" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 9/Spikes2" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 9/Spikes3" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 9/Spikes4" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 9/Spikes13" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 9/Spikes5" to="Players/lab_rat" method="_on_death_block_area_entered"]
+[connection signal="area_entered" from="Levels/Hazards/Section 9/Spikes6" to="Players/lab_rat" method="_on_death_block_area_entered"]
 [connection signal="CameraLocation1" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_1"]
 [connection signal="CameraLocation2" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_2"]
 [connection signal="CameraLocation3" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_3"]
