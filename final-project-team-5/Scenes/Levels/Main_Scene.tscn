@@ -1,31 +1,374 @@
-[gd_scene load_steps=5 format=3 uid="uid://ducdw1i7ifhdl"]
+[gd_scene load_steps=16 format=3 uid="uid://ducdw1i7ifhdl"]
 
 [ext_resource type="Texture2D" uid="uid://c52q6pbjs5goq" path="res://Assets/Art/Background/IMG_2413.png" id="1_gj7jd"]
 [ext_resource type="Texture2D" uid="uid://cciju1soxdtq3" path="res://Assets/Art/Background/IMG_2414.png" id="2_3tgw7"]
 [ext_resource type="Texture2D" uid="uid://b65ihyf6yv56t" path="res://Assets/Art/Background/IMG_2416.png" id="3_vsehv"]
 [ext_resource type="Texture2D" uid="uid://dwy5jt2rweuuy" path="res://Assets/Art/Background/IMG_2415.png" id="4_pyd0y"]
+[ext_resource type="Texture2D" uid="uid://cxymmfobhl78v" path="res://Assets/Art/Background/IMG_2473.png" id="5_n7s37"]
+[ext_resource type="PackedScene" uid="uid://df43qcss8ni3q" path="res://Scenes/Levels/Level_Designs.tscn" id="6_5kygh"]
+[ext_resource type="PackedScene" uid="uid://qcvq23wx47yq" path="res://Scenes/Player Driven (placeholder name)/Lab_rat(Duplicated-different_test).tscn" id="7_hxgxy"]
+[ext_resource type="Script" path="res://Scripts/camera_locations.gd" id="8_rq7ja"]
+[ext_resource type="PackedScene" uid="uid://bghihldvt834d" path="res://Scenes/Controls/CameraManager.tscn" id="8_ymyqn"]
+[ext_resource type="Script" path="res://Scripts/Globals/global_camera_manager.gd" id="9_0sv3t"]
+[ext_resource type="Script" path="res://Scripts/Globals/global_platform_organizing.gd" id="10_7bb0v"]
+[ext_resource type="PackedScene" uid="uid://ceyp7ov5d8n1" path="res://Scenes/Controls/Mouse(test).tscn" id="11_loekj"]
+[ext_resource type="Script" path="res://Scripts/buddy_position.gd" id="13_vl8pb"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k25q7"]
+size = Vector2(138, 457)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lg3an"]
+size = Vector2(30, 658)
+
+[node name="Main" type="Node2D"]
 
 [node name="backgrounds" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="backgrounds"]
+[node name="StandardBackground" type="Node2D" parent="backgrounds"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="backgrounds/StandardBackground"]
 position = Vector2(640, 360)
 texture = ExtResource("1_gj7jd")
 
-[node name="Sprite2D2" type="Sprite2D" parent="backgrounds"]
+[node name="StationBackground" type="Node2D" parent="backgrounds"]
 visible = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="backgrounds/StationBackground"]
 position = Vector2(640, 360)
 texture = ExtResource("2_3tgw7")
 
-[node name="Sprite2D3" type="Sprite2D" parent="backgrounds"]
+[node name="General Background" type="Node2D" parent="backgrounds"]
+
+[node name="Sprite2D3" type="Sprite2D" parent="backgrounds/General Background"]
 visible = false
 position = Vector2(640, 360)
 texture = ExtResource("3_vsehv")
 
-[node name="Sprite2D4" type="Sprite2D" parent="backgrounds"]
-visible = false
+[node name="FloorlessBackground" type="Node2D" parent="backgrounds"]
+
+[node name="Sprite2D5" type="Sprite2D" parent="backgrounds/FloorlessBackground"]
+position = Vector2(640, 360)
+texture = ExtResource("5_n7s37")
+
+[node name="Sprite2D6" type="Sprite2D" parent="backgrounds/FloorlessBackground"]
+position = Vector2(1920, 360)
+texture = ExtResource("5_n7s37")
+
+[node name="Sprite2D7" type="Sprite2D" parent="backgrounds/FloorlessBackground"]
+position = Vector2(3200, 360)
+texture = ExtResource("5_n7s37")
+
+[node name="Sprite2D8" type="Sprite2D" parent="backgrounds/FloorlessBackground"]
+position = Vector2(4480, 360)
+texture = ExtResource("5_n7s37")
+
+[node name="Sprite2D9" type="Sprite2D" parent="backgrounds/FloorlessBackground"]
+position = Vector2(5728, 360)
+texture = ExtResource("5_n7s37")
+
+[node name="Sprite2D10" type="Sprite2D" parent="backgrounds/FloorlessBackground"]
+position = Vector2(6912, 360)
+texture = ExtResource("5_n7s37")
+
+[node name="FloorlessBackground (Dark)" type="Node2D" parent="backgrounds"]
+
+[node name="Sprite2D4" type="Sprite2D" parent="backgrounds/FloorlessBackground (Dark)"]
 position = Vector2(640, 360)
 texture = ExtResource("4_pyd0y")
 
-[node name="Node" type="Node" parent="."]
+[node name="Sprite2D5" type="Sprite2D" parent="backgrounds/FloorlessBackground (Dark)"]
+position = Vector2(8128, 360)
+texture = ExtResource("4_pyd0y")
+
+[node name="Sprite2D6" type="Sprite2D" parent="backgrounds/FloorlessBackground (Dark)"]
+position = Vector2(9360, 360)
+texture = ExtResource("4_pyd0y")
+
+[node name="Sprite2D7" type="Sprite2D" parent="backgrounds/FloorlessBackground (Dark)"]
+position = Vector2(10512, 360)
+texture = ExtResource("4_pyd0y")
+
+[node name="Restart" type="Area2D" parent="."]
+position = Vector2(5976, 864)
+rotation = 1.5708
+scale = Vector2(0.4048, -24.7548)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Restart"]
+position = Vector2(0.00311163, -14.2195)
+scale = Vector2(1, 1.03555)
+shape = SubResource("RectangleShape2D_k25q7")
+debug_color = Color(0.999102, 0, 0.123544, 0.42)
+
+[node name="Levels" parent="." instance=ExtResource("6_5kygh")]
+
+[node name="Players" type="Node2D" parent="."]
+
+[node name="lab_rat" parent="Players" instance=ExtResource("7_hxgxy")]
+position = Vector2(192, 520)
+scale = Vector2(0.4, 0.4)
+jumpVelocity = -375.0
+friction = 0.15
+gravityPull = 65
+
+[node name="FollowPlayerCamera" type="Camera2D" parent="Players/lab_rat"]
+unique_name_in_owner = true
+zoom = Vector2(2.5, 2.5)
+
+[node name="Mouse" parent="Players" instance=ExtResource("11_loekj")]
+
+[node name="CameraManaging" type="Node2D" parent="."]
+
+[node name="SceneCamera" type="Camera2D" parent="CameraManaging"]
+unique_name_in_owner = true
+position = Vector2(616, 368)
+scale = Vector2(0.45, 0.45)
+metadata/_edit_lock_ = true
+
+[node name="SceneCamera2" type="Camera2D" parent="CameraManaging"]
+unique_name_in_owner = true
+position = Vector2(1912, 362)
+scale = Vector2(0.45, 0.45)
+
+[node name="CameraMarker" type="Node2D" parent="CameraManaging" node_paths=PackedStringArray("SceneCamera")]
+script = ExtResource("8_rq7ja")
+SceneCamera = NodePath("../SceneCamera")
+CameraMarkerArray = [Vector2(616, 368), Vector2i(1920, 368), Vector2(3176, 368), Vector2(4472, 368), Vector2(5664, 368), Vector2(6848, 368), Vector2(8064, 368), Vector2(9246, 368), Vector2(10496, 368)]
+
+[node name="SceneCameraMarker" type="Marker2D" parent="CameraManaging/CameraMarker"]
+position = Vector2(616, 368)
+
+[node name="SceneCameraMarker2" type="Marker2D" parent="CameraManaging/CameraMarker"]
+position = Vector2(1920, 368)
+
+[node name="SceneCameraMarker3" type="Marker2D" parent="CameraManaging/CameraMarker"]
+position = Vector2(3176, 368)
+
+[node name="SceneCameraMarker4" type="Marker2D" parent="CameraManaging/CameraMarker"]
+position = Vector2(4472, 368)
+
+[node name="SceneCameraMarker5" type="Marker2D" parent="CameraManaging/CameraMarker"]
+position = Vector2(5664, 367)
+
+[node name="SceneCameraMarker6" type="Marker2D" parent="CameraManaging/CameraMarker"]
+position = Vector2(6848, 368)
+
+[node name="SceneCameraMarker7" type="Marker2D" parent="CameraManaging/CameraMarker"]
+position = Vector2(8064, 368)
+
+[node name="SceneCameraMarker8" type="Marker2D" parent="CameraManaging/CameraMarker"]
+position = Vector2(9296, 368)
+
+[node name="SceneCameraMarker9" type="Marker2D" parent="CameraManaging/CameraMarker"]
+position = Vector2(10496, 368)
+
+[node name="CameraSwitching" type="Node2D" parent="CameraManaging"]
+
+[node name="CameraLocation1" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(1096, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation1"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="CameraLocation2" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(1240, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation2"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="CameraLocation2b" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(2528, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation2b"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="CameraLocation3" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(2672, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation3"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="CameraLocation3b" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(3736, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation3b"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="CameraLocation4" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(3840, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation4"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="CameraLocation4b2" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(4952, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation4b2"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="CameraLocation5" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(5096, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation5"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="CameraLocation5b" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(6192, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation5b"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="CameraLocation6" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(6336, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation6"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="CameraLocation6b" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(7432, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation6b"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="CameraLocation7" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(7512, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation7"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="CameraLocation6b2" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(8648, 31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation6b2"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="CameraLocation8" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(8792, 31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation8"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="CameraLocation8b" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(9851, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation8b"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="CameraLocation9" type="Area2D" parent="CameraManaging/CameraSwitching"]
+position = Vector2(9944, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation9"]
+position = Vector2(11, 319)
+shape = SubResource("RectangleShape2D_lg3an")
+debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
+
+[node name="GlobalsCamera" type="Node" parent="CameraManaging"]
+script = ExtResource("9_0sv3t")
+
+[node name="CameraManager" parent="." node_paths=PackedStringArray("FollowPlayerCamera", "SceneCamera") instance=ExtResource("8_ymyqn")]
+position = Vector2(576, 324)
+FollowPlayerCamera = NodePath("../Players/lab_rat/FollowPlayerCamera")
+SceneCamera = NodePath("../CameraManaging/SceneCamera")
+metadata/_edit_lock_ = true
+
+[node name="MoveCreatedPlatform (Global Script)" type="Node" parent="."]
+script = ExtResource("10_7bb0v")
+
+[node name="Buddy Position" type="Node2D" parent="." node_paths=PackedStringArray("Buddy", "PositionMarker1", "PositionMarker2", "PositionMarker3", "PositionMarker4", "PositionMarker5", "PositionMarker6", "PositionMarker7", "PositionMarker8", "PositionMarker9")]
+script = ExtResource("13_vl8pb")
+Buddy = NodePath("../Players/lab_rat")
+PositionMarker1 = NodePath("BuddyPositionMarker1")
+PositionMarker2 = NodePath("BuddyPositionMarker2")
+PositionMarker3 = NodePath("BuddyPositionMarker3")
+PositionMarker4 = NodePath("BuddyPositionMarker4")
+PositionMarker5 = NodePath("BuddyPositionMarker5")
+PositionMarker6 = NodePath("BuddyPositionMarker6")
+PositionMarker7 = NodePath("BuddyPositionMarker7")
+PositionMarker8 = NodePath("BuddyPositionMarker8")
+PositionMarker9 = NodePath("BuddyPositionMarker9")
+
+[node name="BuddyPositionMarker1" type="Marker2D" parent="Buddy Position"]
+position = Vector2(194, 520)
+
+[node name="BuddyPositionMarker2" type="Marker2D" parent="Buddy Position"]
+position = Vector2(1408, 509)
+
+[node name="BuddyPositionMarker3" type="Marker2D" parent="Buddy Position"]
+position = Vector2(2736, 509)
+
+[node name="BuddyPositionMarker4" type="Marker2D" parent="Buddy Position"]
+position = Vector2(3968, 382)
+
+[node name="BuddyPositionMarker5" type="Marker2D" parent="Buddy Position"]
+position = Vector2(5248, 144)
+
+[node name="BuddyPositionMarker6" type="Marker2D" parent="Buddy Position"]
+position = Vector2(6360, 172)
+
+[node name="BuddyPositionMarker7" type="Marker2D" parent="Buddy Position"]
+position = Vector2(7680, 528)
+
+[node name="BuddyPositionMarker8" type="Marker2D" parent="Buddy Position"]
+position = Vector2(8803, 320)
+
+[node name="BuddyPositionMarker9" type="Marker2D" parent="Buddy Position"]
+position = Vector2(9944, 320)
+
+[connection signal="area_entered" from="Restart" to="Players/lab_rat" method="_on_restart_area_entered"]
+[connection signal="CameraLocation1" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_1"]
+[connection signal="CameraLocation2" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_2"]
+[connection signal="CameraLocation3" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_3"]
+[connection signal="CameraLocation4" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_4"]
+[connection signal="CameraLocation5" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_5"]
+[connection signal="CameraLocation6" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_6"]
+[connection signal="CameraLocation7" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_7"]
+[connection signal="CameraLocation8" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_8"]
+[connection signal="CameraLocation9" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_9"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation1" to="Players/lab_rat" method="_on_camera_location_1_area_entered"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation2" to="Players/lab_rat" method="_on_camera_location_2_area_entered"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation2b" to="Players/lab_rat" method="_on_camera_location_2_area_entered"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation3" to="Players/lab_rat" method="_on_camera_location_3_area_entered"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation3b" to="Players/lab_rat" method="_on_camera_location_3_area_entered"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation4" to="Players/lab_rat" method="_on_camera_location_4_area_entered"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation4b2" to="Players/lab_rat" method="_on_camera_location_4_area_entered"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation5" to="Players/lab_rat" method="_on_camera_location_5_area_entered"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation5b" to="Players/lab_rat" method="_on_camera_location_5_area_entered"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation6" to="Players/lab_rat" method="_on_camera_location_6_area_entered"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation6b" to="Players/lab_rat" method="_on_camera_location_6_area_entered"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation7" to="Players/lab_rat" method="_on_camera_location_7_area_entered"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation6b2" to="Players/lab_rat" method="_on_camera_location_7_area_entered"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation8" to="Players/lab_rat" method="_on_camera_location_8_area_entered"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation8b" to="Players/lab_rat" method="_on_camera_location_8_area_entered"]
+[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation9" to="Players/lab_rat" method="_on_camera_location_9_area_entered"]

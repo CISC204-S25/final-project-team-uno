@@ -1,22 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://bmbqkn1lmnp3t"]
+[gd_scene load_steps=22 format=3 uid="uid://df43qcss8ni3q"]
 
-[ext_resource type="Texture2D" uid="uid://c52q6pbjs5goq" path="res://Assets/Art/Background/IMG_2413.png" id="1_1jjsc"]
-[ext_resource type="Texture2D" uid="uid://cciju1soxdtq3" path="res://Assets/Art/Background/IMG_2414.png" id="2_h6wqn"]
-[ext_resource type="Texture2D" uid="uid://b65ihyf6yv56t" path="res://Assets/Art/Background/IMG_2416.png" id="3_4p3xm"]
-[ext_resource type="Texture2D" uid="uid://dwy5jt2rweuuy" path="res://Assets/Art/Background/IMG_2415.png" id="4_kdovw"]
-[ext_resource type="Texture2D" uid="uid://cxymmfobhl78v" path="res://Assets/Art/Background/IMG_2473.png" id="5_empe8"]
-[ext_resource type="PackedScene" uid="uid://qcvq23wx47yq" path="res://Scenes/Player Driven (placeholder name)/Lab_rat(Duplicated-different_test).tscn" id="5_xd25y"]
-[ext_resource type="PackedScene" uid="uid://dfucaseofrsl2" path="res://Scenes/Player Driven (placeholder name)/Created Platform.tscn" id="6_agblk"]
-[ext_resource type="Script" path="res://Scripts/Globals/global_platform_organizing.gd" id="7_s2dx5"]
-[ext_resource type="PackedScene" uid="uid://ceyp7ov5d8n1" path="res://Scenes/Controls/Mouse(test).tscn" id="8_o4jy7"]
-[ext_resource type="PackedScene" uid="uid://bghihldvt834d" path="res://Scenes/Controls/CameraManager.tscn" id="9_oxrpm"]
-[ext_resource type="PackedScene" uid="uid://cv3n6nhbgk5y2" path="res://Scenes/UI/platforms_ui.tscn" id="10_gwfxx"]
-[ext_resource type="Texture2D" uid="uid://wh273422i4vk" path="res://Assets/Art/assets/Platform.png" id="11_2q5cy"]
-[ext_resource type="Texture2D" uid="uid://csndm4u3vkolc" path="res://Assets/Art/assets/100500203_oiOOi4vzb92vlpT.png" id="13_yxqma"]
-[ext_resource type="Texture2D" uid="uid://b2impfauq64mg" path="res://Assets/Art/assets/100500169_ovgJUQczidKKHzm.png" id="14_qnwq0"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ps1r"]
-size = Vector2(20, 20.6191)
+[ext_resource type="Texture2D" uid="uid://wh273422i4vk" path="res://Assets/Art/assets/Platform.png" id="12_i2p2g"]
+[ext_resource type="Texture2D" uid="uid://csndm4u3vkolc" path="res://Assets/Art/assets/100500203_oiOOi4vzb92vlpT.png" id="13_upuuu"]
+[ext_resource type="Texture2D" uid="uid://b2impfauq64mg" path="res://Assets/Art/assets/100500169_ovgJUQczidKKHzm.png" id="14_bdanr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1uwx4"]
 size = Vector2(424, 72)
@@ -36,6 +22,9 @@ size = Vector2(212, 352)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wpnxy"]
 size = Vector2(124.378, 72)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icuao"]
+size = Vector2(366.227, 72)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a8hhy"]
 size = Vector2(212.73, 72)
 
@@ -54,94 +43,25 @@ size = Vector2(184.304, 72)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wyg2k"]
 size = Vector2(15.8035, 25.2)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7f6b"]
-size = Vector2(138, 457)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ityu6"]
+size = Vector2(424, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmm3g"]
+size = Vector2(212.73, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e37s1"]
+size = Vector2(164.023, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3lcl"]
+size = Vector2(212, 352)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tmn2u"]
+size = Vector2(15.8035, 25.2)
 
 [node name="Levels" type="Node2D"]
 
-[node name="backgrounds" type="Node2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="backgrounds"]
-visible = false
-position = Vector2(640, 360)
-texture = ExtResource("1_1jjsc")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D2" type="Sprite2D" parent="backgrounds"]
-visible = false
-position = Vector2(640, 360)
-texture = ExtResource("2_h6wqn")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D3" type="Sprite2D" parent="backgrounds"]
-visible = false
-position = Vector2(640, 360)
-texture = ExtResource("3_4p3xm")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D4" type="Sprite2D" parent="backgrounds"]
-position = Vector2(640, 360)
-texture = ExtResource("4_kdovw")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D5" type="Sprite2D" parent="backgrounds"]
-visible = false
-position = Vector2(640, 360)
-texture = ExtResource("5_empe8")
-metadata/_edit_lock_ = true
-
-[node name="lab_rat" parent="." instance=ExtResource("5_xd25y")]
-position = Vector2(184, 456)
-scale = Vector2(0.4, 0.4)
-jumpVelocity = -375.0
-friction = 0.15
-gravityPull = 65
-
-[node name="FollowPlayerCamera" type="Camera2D" parent="lab_rat"]
-unique_name_in_owner = true
-zoom = Vector2(2.5, 2.5)
-
-[node name="SceneCamera" type="Camera2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(616, 368)
-scale = Vector2(0.45, 0.45)
-metadata/_edit_lock_ = true
-
-[node name="CreatedPlatforms" parent="." instance=ExtResource("6_agblk")]
-position = Vector2(0, -104)
-
-[node name="MoveCreatedPlatform (Global Script)" type="Node" parent="."]
-script = ExtResource("7_s2dx5")
-
-[node name="Mouse" parent="." instance=ExtResource("8_o4jy7")]
-
-[node name="CameraManager" parent="." node_paths=PackedStringArray("FollowPlayerCamera", "SceneCamera") instance=ExtResource("9_oxrpm")]
-position = Vector2(576, 324)
-FollowPlayerCamera = NodePath("../lab_rat/FollowPlayerCamera")
-SceneCamera = NodePath("../SceneCamera")
-metadata/_edit_lock_ = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Platforms_UI" parent="CanvasLayer" instance=ExtResource("10_gwfxx")]
-visible = false
-offset_top = 8.0
-offset_bottom = 8.0
-metadata/_edit_lock_ = true
-
-[node name="NoCreationArea" type="Area2D" parent="CanvasLayer/Platforms_UI"]
-position = Vector2(0, -8)
-scale = Vector2(1, 1.4)
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Platforms_UI/NoCreationArea"]
-position = Vector2(112, -34.2857)
-scale = Vector2(12, 3)
-shape = SubResource("RectangleShape2D_6ps1r")
-
 [node name="Sections" type="Node2D" parent="."]
-position = Vector2(-1280, 0)
+position = Vector2(1512, 0)
 
 [node name="Section1" type="Node2D" parent="Sections"]
 position = Vector2(-1512, 0)
@@ -153,7 +73,7 @@ scale = Vector2(0.970001, 1)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section1/StaticBody2D"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section1/StaticBody2D"]
 scale = Vector2(1.17647, 1)
@@ -168,7 +88,7 @@ scale = Vector2(0.85, 1)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section1/StaticBody2D2"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section1/StaticBody2D2"]
 scale = Vector2(1.17647, 1)
@@ -185,7 +105,7 @@ scale = Vector2(0.85, 1)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-0.294128, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section1/StaticBody2D3"]
 position = Vector2(6.10352e-05, -0.000366211)
@@ -203,7 +123,7 @@ scale = Vector2(1.85, 1)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-0.294128, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section1/StaticBody2D4"]
 position = Vector2(9.15527e-05, -0.000244141)
@@ -220,7 +140,7 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section1/Platform/StaticBody2D"]
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section1/Platform/StaticBody2D"]
 scale = Vector2(1.17647, 1)
@@ -234,7 +154,7 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section1/Platform/StaticBody2D2"]
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section1/Platform/StaticBody2D2"]
 scale = Vector2(1.17647, 1)
@@ -252,7 +172,7 @@ scale = Vector2(0.970001, 1)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section2/StaticBody2D"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section2/StaticBody2D"]
 scale = Vector2(1.17647, 1)
@@ -265,10 +185,9 @@ position = Vector2(151, 362)
 scale = Vector2(0.970001, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section2/StaticBody2D6"]
-modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-0.257889, 0.375)
 scale = Vector2(0.664948, 0.353896)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section2/StaticBody2D6"]
 position = Vector2(0.0363159, 0)
@@ -285,7 +204,7 @@ scale = Vector2(0.489999, 1)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-0.257889, 0.375)
 scale = Vector2(0.664948, 0.353896)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section2/StaticBody2D7"]
 position = Vector2(0.0363159, 0)
@@ -301,7 +220,7 @@ scale = Vector2(0.85, 1)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section2/StaticBody2D2"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section2/StaticBody2D2"]
 scale = Vector2(1.17647, 1)
@@ -318,7 +237,7 @@ scale = Vector2(0.85, 1)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-0.294128, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section2/StaticBody2D3"]
 position = Vector2(6.10352e-05, -0.000366211)
@@ -336,7 +255,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section2/StaticBody2D5"]
 position = Vector2(0.000549316, 0)
@@ -354,7 +273,7 @@ scale = Vector2(1.85, 1)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.056366, -0.000854492)
 scale = Vector2(0.293834, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section2/StaticBody2D4"]
 position = Vector2(0.349854, -0.000854492)
@@ -371,7 +290,7 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section2/Platform/StaticBody2D"]
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section2/Platform/StaticBody2D"]
 scale = Vector2(1.17647, 1)
@@ -385,7 +304,7 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section2/Platform/StaticBody2D2"]
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section2/Platform/StaticBody2D2"]
 scale = Vector2(1.17647, 1)
@@ -394,20 +313,22 @@ debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
 [node name="Section3" type="Node2D" parent="Sections"]
-position = Vector2(1280, 0)
+position = Vector2(1112, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sections/Section3"]
-position = Vector2(176, 684)
+position = Vector2(209, 684)
 scale = Vector2(0.970001, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section3/StaticBody2D"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
-scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+position = Vector2(0.257813, 0)
+scale = Vector2(0.862886, 0.915584)
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section3/StaticBody2D"]
+position = Vector2(-0.036377, 0)
 scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_1uwx4")
+shape = SubResource("RectangleShape2D_icuao")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
@@ -418,7 +339,7 @@ scale = Vector2(0.85, 1)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section3/StaticBody2D2"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section3/StaticBody2D2"]
 scale = Vector2(1.17647, 1)
@@ -435,7 +356,7 @@ scale = Vector2(1.85, 1)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-0.294128, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section3/StaticBody2D4"]
 position = Vector2(6.10352e-05, -0.000366211)
@@ -452,7 +373,7 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section3/Platform/StaticBody2D"]
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section3/Platform/StaticBody2D"]
 scale = Vector2(1.17647, 1)
@@ -461,12 +382,12 @@ debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Sections/Section3/Platform"]
-position = Vector2(160, 363)
+position = Vector2(160, 344)
 scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section3/Platform/StaticBody2D2"]
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section3/Platform/StaticBody2D2"]
 scale = Vector2(1.17647, 1)
@@ -483,7 +404,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section3/StaticBody2D5"]
 position = Vector2(0.000549316, 0)
@@ -501,7 +422,7 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section3/Floor6"]
 position = Vector2(2.16223, -0.000366211)
@@ -510,8 +431,62 @@ shape = SubResource("RectangleShape2D_xxb1o")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
+[node name="FloorSquare2" type="StaticBody2D" parent="Sections/Section3"]
+position = Vector2(1152, 592)
+rotation = -1.57079
+scale = Vector2(0.404, 0.361)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sections/Section3/FloorSquare2"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+position = Vector2(1.91331e-05, 7.40224e-06)
+scale = Vector2(0.5, 0.915584)
+texture = ExtResource("13_upuuu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section3/FloorSquare2"]
+position = Vector2(0.000549316, 0)
+scale = Vector2(1.17647, 1)
+shape = SubResource("RectangleShape2D_3ebx5")
+debug_color = Color(1, 1, 1, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="FloorSquare3" type="StaticBody2D" parent="Sections/Section3"]
+position = Vector2(1152, 488)
+rotation = -1.57079
+scale = Vector2(0.404, 0.361)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sections/Section3/FloorSquare3"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+position = Vector2(1.91331e-05, 7.40224e-06)
+scale = Vector2(0.5, 0.915584)
+texture = ExtResource("13_upuuu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section3/FloorSquare3"]
+position = Vector2(0.000549316, 0)
+scale = Vector2(1.17647, 1)
+shape = SubResource("RectangleShape2D_3ebx5")
+debug_color = Color(1, 1, 1, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="FloorSquare4" type="StaticBody2D" parent="Sections/Section3"]
+position = Vector2(1152, 382)
+rotation = -1.57079
+scale = Vector2(0.404, 0.361)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sections/Section3/FloorSquare4"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+position = Vector2(1.91331e-05, 7.40224e-06)
+scale = Vector2(0.5, 0.915584)
+texture = ExtResource("13_upuuu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section3/FloorSquare4"]
+position = Vector2(0.000549316, 0)
+scale = Vector2(1.17647, 1)
+shape = SubResource("RectangleShape2D_3ebx5")
+debug_color = Color(1, 1, 1, 0.42)
+metadata/_edit_lock_ = true
+
 [node name="Section4" type="Node2D" parent="Sections"]
-position = Vector2(2744, 0)
+position = Vector2(2392, 0)
 
 [node name="Floor" type="StaticBody2D" parent="Sections/Section4"]
 position = Vector2(285.96, 684)
@@ -520,7 +495,7 @@ scale = Vector2(0.970001, 1)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section4/Floor"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/Floor"]
 scale = Vector2(1.17647, 1)
@@ -535,7 +510,7 @@ scale = Vector2(0.708868, 0.624322)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section4/Floor3"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/Floor3"]
 scale = Vector2(1.17647, 1)
@@ -550,7 +525,7 @@ scale = Vector2(0.85, 1)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section4/Floor2"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/Floor2"]
 scale = Vector2(1.17647, 1)
@@ -567,7 +542,7 @@ scale = Vector2(1.84998, 0.640308)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-0.294128, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/Floor7"]
 position = Vector2(2.16223, -0.000366211)
@@ -585,7 +560,7 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850281, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/Floor5"]
 position = Vector2(2.16223, -0.000366211)
@@ -603,7 +578,7 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/Floor6"]
 position = Vector2(2.16223, -0.000366211)
@@ -620,7 +595,7 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/Floor8"]
 position = Vector2(2.16223, -0.000366211)
@@ -637,7 +612,7 @@ scale = Vector2(0.35, 0.35)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section4/Platforms/Platform"]
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/Platforms/Platform"]
 scale = Vector2(1.17647, 1)
@@ -651,7 +626,7 @@ scale = Vector2(0.35, 0.35)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section4/Platforms/Platform2"]
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/Platforms/Platform2"]
 scale = Vector2(1.17647, 1)
@@ -666,7 +641,7 @@ scale = Vector2(0.85, 0.358)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section4/Platforms/Platform3"]
 position = Vector2(-0.294128, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/Platforms/Platform3"]
 position = Vector2(-0.270274, -0.000366211)
@@ -682,7 +657,7 @@ scale = Vector2(0.85, 0.358)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section4/Platforms/Platform4"]
 position = Vector2(-0.294128, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/Platforms/Platform4"]
 position = Vector2(-0.270274, -0.000366211)
@@ -700,7 +675,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/FloorSquare"]
 position = Vector2(0.000549316, 0)
@@ -718,7 +693,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/FloorSquare2"]
 position = Vector2(0.000549316, 0)
@@ -736,7 +711,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/FloorSquare3"]
 position = Vector2(0.000549316, 0)
@@ -754,7 +729,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/FloorSquare4"]
 position = Vector2(0.000549316, 0)
@@ -772,7 +747,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/FloorSquare5"]
 position = Vector2(0.000549316, 0)
@@ -790,7 +765,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/FloorSquare6"]
 position = Vector2(0.000549316, 0)
@@ -808,7 +783,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/FloorSquare7"]
 position = Vector2(0.000549316, 0)
@@ -826,7 +801,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/FloorSquare(Move)"]
 position = Vector2(0.000549316, 0)
@@ -844,7 +819,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/FloorSquare(Move)2"]
 position = Vector2(0.000549316, 0)
@@ -862,7 +837,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/FloorSquare8"]
 position = Vector2(0.000549316, 0)
@@ -880,7 +855,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/FloorSquare9"]
 position = Vector2(0.000549316, 0)
@@ -890,7 +865,7 @@ debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
 [node name="Section5" type="Node2D" parent="Sections"]
-position = Vector2(3928, 0)
+position = Vector2(3576, 0)
 
 [node name="Floor2" type="StaticBody2D" parent="Sections/Section5"]
 position = Vector2(504, 684)
@@ -899,7 +874,7 @@ scale = Vector2(0.85, 1)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section5/Floor2"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Floor2"]
 scale = Vector2(1.17647, 1)
@@ -915,7 +890,7 @@ scale = Vector2(0.85, 1)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-0.882355, 0)
 scale = Vector2(0.78, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Floor3"]
 position = Vector2(-0.588093, 0)
@@ -932,7 +907,7 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Floor8"]
 position = Vector2(2.16223, -0.000366211)
@@ -949,7 +924,7 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Floor9"]
 position = Vector2(2.16223, -0.000366211)
@@ -966,7 +941,7 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Floor17"]
 position = Vector2(2.16223, -0.000366211)
@@ -983,7 +958,7 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-0.829468, -0.000244141)
 scale = Vector2(0.388289, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Floor10"]
 position = Vector2(-0.241058, -0.000366211)
@@ -1001,7 +976,7 @@ scale = Vector2(1.79, 0.452)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Floor11"]
 position = Vector2(2.16223, -0.000366211)
@@ -1019,7 +994,7 @@ scale = Vector2(1.79, 0.452)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Floor12"]
 position = Vector2(2.16223, -0.000366211)
@@ -1037,7 +1012,7 @@ scale = Vector2(1.79, 0.452)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Floor14"]
 position = Vector2(2.16223, -0.000366211)
@@ -1055,7 +1030,7 @@ scale = Vector2(1.79, 0.452)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Floor13"]
 position = Vector2(2.16223, -0.000366211)
@@ -1073,7 +1048,7 @@ scale = Vector2(1.79, 0.452)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Floor15"]
 position = Vector2(2.16223, -0.000366211)
@@ -1091,7 +1066,7 @@ scale = Vector2(1.79, 0.452)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Floor16"]
 position = Vector2(2.16223, -0.000366211)
@@ -1109,7 +1084,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/FloorSquare2"]
 position = Vector2(0.000549316, 0)
@@ -1127,7 +1102,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/FloorSquare5"]
 position = Vector2(0.000549316, 0)
@@ -1145,7 +1120,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/FloorSquare8"]
 position = Vector2(0.000549316, 0)
@@ -1163,7 +1138,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/FloorSquare9"]
 position = Vector2(0.000549316, 0)
@@ -1181,7 +1156,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/FloorSquare3"]
 position = Vector2(0.000549316, 0)
@@ -1199,7 +1174,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/FloorSquare6"]
 position = Vector2(0.000549316, 0)
@@ -1217,7 +1192,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/FloorSquare10"]
 position = Vector2(0.000549316, 0)
@@ -1235,7 +1210,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/FloorSquare11"]
 position = Vector2(0.000549316, 0)
@@ -1252,7 +1227,7 @@ scale = Vector2(0.0840529, 0.0922176)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section5/Platform/PlatformSquare"]
 scale = Vector2(1, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Platform/PlatformSquare"]
 scale = Vector2(1.17647, 1)
@@ -1266,7 +1241,7 @@ scale = Vector2(0.0840529, 0.0922176)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section5/Platform/PlatformSquare3"]
 scale = Vector2(1, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Platform/PlatformSquare3"]
 scale = Vector2(1.17647, 1)
@@ -1280,7 +1255,7 @@ scale = Vector2(0.0840529, 0.0922176)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section5/Platform/PlatformSquare4"]
 scale = Vector2(1, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Platform/PlatformSquare4"]
 scale = Vector2(1.17647, 1)
@@ -1294,7 +1269,7 @@ scale = Vector2(0.0840529, 0.0922176)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section5/Platform/PlatformSquare5"]
 scale = Vector2(1, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Platform/PlatformSquare5"]
 scale = Vector2(1.17647, 1)
@@ -1308,7 +1283,7 @@ scale = Vector2(0.0840529, 0.0922176)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section5/Platform/PlatformSquare2"]
 scale = Vector2(1, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section5/Platform/PlatformSquare2"]
 scale = Vector2(1.17647, 1)
@@ -1317,7 +1292,7 @@ debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
 [node name="Section6" type="Node2D" parent="Sections"]
-position = Vector2(5120, 0)
+position = Vector2(4768, 0)
 
 [node name="Floor3" type="StaticBody2D" parent="Sections/Section6"]
 position = Vector2(1281, 684)
@@ -1326,7 +1301,7 @@ scale = Vector2(0.85, 1)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section6/Floor3"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/Floor3"]
 scale = Vector2(1.17647, 1)
@@ -1342,7 +1317,7 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/Floor8"]
 position = Vector2(2.16223, -0.000366211)
@@ -1359,7 +1334,7 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/Floor9"]
 position = Vector2(2.16223, -0.000366211)
@@ -1376,7 +1351,7 @@ scale = Vector2(2.40711, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-0.829468, -0.000244141)
 scale = Vector2(0.388289, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/Floor10"]
 position = Vector2(-0.241058, -0.000366211)
@@ -1394,7 +1369,7 @@ scale = Vector2(1.79, 0.452)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-0.80011, -0.000976563)
 scale = Vector2(0.435298, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/Floor14"]
 position = Vector2(-0.0339661, -0.000976563)
@@ -1412,7 +1387,7 @@ scale = Vector2(1.79, 0.452)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/Floor13"]
 position = Vector2(2.16223, -0.000366211)
@@ -1430,7 +1405,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/FloorSquare2"]
 position = Vector2(0.000549316, 0)
@@ -1448,7 +1423,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/FloorSquare5"]
 position = Vector2(0.000549316, 0)
@@ -1466,7 +1441,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/FloorSquare8"]
 position = Vector2(0.000549316, 0)
@@ -1484,7 +1459,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/FloorSquare9"]
 position = Vector2(0.000549316, 0)
@@ -1502,7 +1477,7 @@ scale = Vector2(0.2, 0.3)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section6/Asyncronous Platform/Platform"]
 modulate = Color(1, 0.708652, 0.530283, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/Asyncronous Platform/Platform"]
 scale = Vector2(1.17647, 1)
@@ -1517,7 +1492,7 @@ scale = Vector2(0.2, 0.3)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section6/Asyncronous Platform/Platform2"]
 modulate = Color(0.564706, 1, 1, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/Asyncronous Platform/Platform2"]
 scale = Vector2(1.17647, 1)
@@ -1532,7 +1507,7 @@ scale = Vector2(0.2, 0.3)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section6/Asyncronous Platform/Platform3"]
 modulate = Color(1, 0.708652, 0.530283, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/Asyncronous Platform/Platform3"]
 scale = Vector2(1.17647, 1)
@@ -1547,7 +1522,7 @@ scale = Vector2(0.2, 0.3)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section6/Asyncronous Platform/Platform5"]
 modulate = Color(1, 0.708652, 0.530283, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/Asyncronous Platform/Platform5"]
 scale = Vector2(1.17647, 1)
@@ -1562,7 +1537,7 @@ scale = Vector2(0.2, 0.3)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section6/Asyncronous Platform/Platform4"]
 modulate = Color(0.564706, 1, 1, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/Asyncronous Platform/Platform4"]
 scale = Vector2(1.17647, 1)
@@ -1579,7 +1554,7 @@ scale = Vector2(0.184, 0.164)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section6/FloorSquare4"]
 position = Vector2(0.000549316, 0)
@@ -1589,7 +1564,7 @@ debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
 [node name="Section7" type="Node2D" parent="Sections"]
-position = Vector2(6401, 0)
+position = Vector2(5976, 0)
 
 [node name="Floor3" type="StaticBody2D" parent="Sections/Section7"]
 position = Vector2(1281, 684)
@@ -1598,7 +1573,7 @@ scale = Vector2(0.85, 1)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Floor3"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Floor3"]
 scale = Vector2(1.17647, 1)
@@ -1613,7 +1588,7 @@ scale = Vector2(0.85, 1)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Floor4"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Floor4"]
 scale = Vector2(1.17647, 1)
@@ -1629,7 +1604,7 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Floor8"]
 position = Vector2(2.16223, -0.000366211)
@@ -1646,7 +1621,7 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Floor9"]
 position = Vector2(2.16223, -0.000366211)
@@ -1663,7 +1638,7 @@ scale = Vector2(2.40711, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-0.829468, -0.000244141)
 scale = Vector2(0.388289, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Floor10"]
 position = Vector2(-0.241058, -0.000366211)
@@ -1681,7 +1656,7 @@ scale = Vector2(0.909997, 0.452)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-0.80011, -0.000976563)
 scale = Vector2(0.435298, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Floor14"]
 position = Vector2(-0.0339661, -0.000976563)
@@ -1699,7 +1674,7 @@ scale = Vector2(1.79, 0.452)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Floor13"]
 position = Vector2(2.16223, -0.000366211)
@@ -1717,7 +1692,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/FloorSquare8"]
 position = Vector2(0.000549316, 0)
@@ -1735,7 +1710,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/FloorSquare9"]
 position = Vector2(0.000549316, 0)
@@ -1752,7 +1727,7 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Platform/Platform"]
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Platform/Platform"]
 scale = Vector2(1.17647, 1)
@@ -1769,7 +1744,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/FloorSquare6"]
 position = Vector2(0.000549316, 0)
@@ -1787,7 +1762,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/FloorSquare7"]
 position = Vector2(0.000549316, 0)
@@ -1809,15 +1784,15 @@ collision_layer = 3
 collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes"]
 position = Vector2(1600, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes"]
 position = Vector2(3200, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes"]
 position = Vector2(1645.62, -0.000244141)
@@ -1833,7 +1808,7 @@ collision_layer = 3
 collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes7"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes7"]
 position = Vector2(-0.000854492, -0.000244141)
@@ -1850,7 +1825,7 @@ collision_layer = 3
 collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes19"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes19"]
 position = Vector2(-0.000854492, -0.000244141)
@@ -1866,23 +1841,23 @@ collision_layer = 3
 collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes6"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes6"]
 position = Vector2(-1600, 0)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes6"]
 position = Vector2(1600, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes6"]
 position = Vector2(3200, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D5" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes6"]
 position = Vector2(4800, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes6"]
 position = Vector2(1645.62, -0.000244141)
@@ -1898,31 +1873,31 @@ collision_layer = 3
 collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes5"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes5"]
 position = Vector2(1600, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes5"]
 position = Vector2(3200, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes5"]
 position = Vector2(4796.5, 5.49978)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D5" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes5"]
 position = Vector2(6396.5, 5.49952)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D6" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes5"]
 position = Vector2(7996.5, 5.49952)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D7" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes5"]
 position = Vector2(9600, 0.000254154)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes5"]
 position = Vector2(4800, -0.000244141)
@@ -1938,15 +1913,15 @@ collision_layer = 3
 collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes4"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes4"]
 position = Vector2(1600, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes4"]
 position = Vector2(3200, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes4"]
 position = Vector2(1645.62, -0.000244141)
@@ -1962,19 +1937,19 @@ collision_layer = 3
 collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes3"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes3"]
 position = Vector2(1600, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes3"]
 position = Vector2(3200, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes3"]
 position = Vector2(4800, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes3"]
 position = Vector2(2133.33, -0.000244141)
@@ -1991,11 +1966,11 @@ collision_layer = 3
 collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes10"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes10"]
 position = Vector2(1600, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes10"]
 position = Vector2(800, 0.00194653)
@@ -2012,11 +1987,11 @@ collision_layer = 3
 collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes11"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes11"]
 position = Vector2(1600, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes11"]
 position = Vector2(766.667, 0.00187249)
@@ -2033,11 +2008,11 @@ collision_layer = 3
 collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes12"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes12"]
 position = Vector2(1600, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes12"]
 position = Vector2(766.667, 0.00187249)
@@ -2054,19 +2029,19 @@ collision_layer = 3
 collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes17"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes17"]
 position = Vector2(1600, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes17"]
 position = Vector2(-1600, 0.00278472)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes17"]
 position = Vector2(-3200, 0.00633875)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes17"]
 position = Vector2(-800, 0.00128346)
@@ -2084,7 +2059,7 @@ collision_mask = 2
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes15"]
 position = Vector2(0, 0.00292969)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes15"]
 scale = Vector2(99.6658, 25)
@@ -2101,7 +2076,7 @@ collision_mask = 2
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes16"]
 position = Vector2(0, 0.00292969)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes16"]
 scale = Vector2(99.6658, 25)
@@ -2118,7 +2093,7 @@ collision_mask = 2
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes18"]
 position = Vector2(0, 0.00292969)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes18"]
 scale = Vector2(99.6658, 25)
@@ -2134,39 +2109,39 @@ collision_layer = 3
 collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes2"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes2"]
 position = Vector2(-1466.67, 0.00651571)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes2"]
 position = Vector2(-2933.33, 0.0130314)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes2"]
 position = Vector2(-4533.33, 0.0201395)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D5" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes2"]
 position = Vector2(-6133.33, 0.0272475)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D6" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes2"]
 position = Vector2(-7733.33, 0.0343556)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D7" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes2"]
 position = Vector2(-9333.33, 0.0414636)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D8" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes2"]
 position = Vector2(-10933.3, 0.0485717)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D9" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes2"]
 position = Vector2(-12533.3, 0.0556797)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes2"]
 position = Vector2(-6400, 0.0284064)
@@ -2183,19 +2158,19 @@ collision_layer = 3
 collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes13"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes13"]
 position = Vector2(-1466.67, 0.00651571)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes13"]
 position = Vector2(-2933.33, 0.0130314)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes13"]
 position = Vector2(-4533.33, 0.0201395)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes13"]
 position = Vector2(-2133.33, 0.00945156)
@@ -2212,19 +2187,19 @@ collision_layer = 3
 collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes14"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes14"]
 position = Vector2(-1466.67, 0.00651571)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes14"]
 position = Vector2(-2933.33, 0.0130314)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes14"]
 position = Vector2(-4533.33, 0.0201395)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes14"]
 position = Vector2(-2133.33, 0.00945156)
@@ -2241,11 +2216,11 @@ collision_layer = 3
 collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes9"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes9"]
 position = Vector2(-1466.67, 0.00651571)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes9"]
 position = Vector2(-800, 0.00352818)
@@ -2262,35 +2237,35 @@ collision_layer = 3
 collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes8"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes8"]
 position = Vector2(-1466.67, 0.00651571)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes8"]
 position = Vector2(-2933.33, 0.0130314)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes8"]
 position = Vector2(-4533.33, 0.0201395)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D5" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes8"]
 position = Vector2(-6133.33, 0.0272475)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D6" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes8"]
 position = Vector2(-7733.33, 0.0343556)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D7" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes8"]
 position = Vector2(-9333.33, 0.0414636)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D8" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes8"]
 position = Vector2(-10933.3, 0.0485717)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes8"]
 position = Vector2(-5066.67, 0.022483)
@@ -2308,7 +2283,7 @@ scale = Vector2(0.714352, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-1.54678, -0.000213623)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Floors/Floor12"]
 position = Vector2(-0.234772, -0.000335693)
@@ -2325,7 +2300,7 @@ scale = Vector2(0.714352, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-1.54678, -0.000213623)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Floors/Floor16"]
 position = Vector2(-0.234772, -0.000335693)
@@ -2342,7 +2317,7 @@ scale = Vector2(0.714352, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-1.54678, -0.000213623)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Floors/Floor20"]
 position = Vector2(-0.234772, -0.000335693)
@@ -2359,7 +2334,7 @@ scale = Vector2(0.714352, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-1.54678, -0.000213623)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Floors/Floor14"]
 position = Vector2(-0.234772, -0.000335693)
@@ -2377,7 +2352,7 @@ scale = Vector2(0.5, 0.45)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-1.54678, -0.000213623)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Floors/Floor13"]
 position = Vector2(-0.234772, -0.000335693)
@@ -2395,7 +2370,7 @@ scale = Vector2(0.299395, 0.45)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-1.54678, -0.000213623)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Floors/Floor22"]
 position = Vector2(-0.234772, -0.000335693)
@@ -2413,7 +2388,7 @@ scale = Vector2(0.459999, 0.45)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-1.54678, -0.000213623)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Floors/Floor17"]
 position = Vector2(-0.234772, -0.000335693)
@@ -2431,7 +2406,7 @@ scale = Vector2(0.459999, 0.45)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-1.54678, -0.000213623)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Floors/Floor18"]
 position = Vector2(-0.234772, -0.000335693)
@@ -2449,7 +2424,7 @@ scale = Vector2(1.03506, 0.450407)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-1.54678, -0.000213623)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Floors/Floor23"]
 position = Vector2(-0.234772, -0.000335693)
@@ -2466,7 +2441,7 @@ scale = Vector2(0.555, 0.43)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-1.54678, -0.000213623)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Floors/Floor15"]
 position = Vector2(-0.234772, -0.000335693)
@@ -2483,7 +2458,7 @@ scale = Vector2(0.555, 0.43)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-1.54678, -0.000213623)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Floors/Floor19"]
 position = Vector2(-0.234772, -0.000335693)
@@ -2500,7 +2475,7 @@ scale = Vector2(0.555, 0.43)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-1.54678, -0.000213623)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Floors/Floor21"]
 position = Vector2(-0.234772, -0.000335693)
@@ -2517,7 +2492,7 @@ scale = Vector2(0.555, 0.43)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-1.54678, -0.000213623)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Floors/Floor24"]
 position = Vector2(-0.234772, -0.000335693)
@@ -2535,7 +2510,7 @@ scale = Vector2(0.124, 0.111)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Floors/FloorSquare4"]
 position = Vector2(0.000549316, 0)
@@ -2553,7 +2528,7 @@ scale = Vector2(0.220002, 0.17)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Floors/FloorSquare5"]
 position = Vector2(0.000549316, 0)
@@ -2563,16 +2538,16 @@ debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
 [node name="Section8" type="Node2D" parent="Sections"]
-position = Vector2(7672, 0)
+position = Vector2(7247, 0)
 
 [node name="Floor3" type="StaticBody2D" parent="Sections/Section8"]
-position = Vector2(1240, 684)
-scale = Vector2(0.689999, 1)
+position = Vector2(1193, 684)
+scale = Vector2(0.770077, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Floor3"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Floor3"]
 scale = Vector2(1.17647, 1)
@@ -2588,7 +2563,7 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Floor8"]
 position = Vector2(2.16223, -0.000366211)
@@ -2605,7 +2580,7 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Floor9"]
 position = Vector2(2.16223, -0.000366211)
@@ -2622,7 +2597,7 @@ scale = Vector2(0.834354, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Floor11"]
 position = Vector2(2.16223, -0.000366211)
@@ -2639,7 +2614,7 @@ scale = Vector2(0.834354, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Floor12"]
 position = Vector2(2.16223, -0.000366211)
@@ -2656,30 +2631,12 @@ scale = Vector2(2.40711, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-0.829468, -0.000244141)
 scale = Vector2(0.388289, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Floor10"]
 position = Vector2(-0.241058, -0.000366211)
 scale = Vector2(1.17647, 1)
 shape = SubResource("RectangleShape2D_15n2k")
-debug_color = Color(1, 1, 1, 0.42)
-metadata/_edit_lock_ = true
-
-[node name="Floor14" type="StaticBody2D" parent="Sections/Section8"]
-position = Vector2(1088, 544)
-rotation = -1.57079
-scale = Vector2(0.91, 0.452)
-
-[node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Floor14"]
-modulate = Color(0.423651, 0.423651, 0.423651, 1)
-position = Vector2(-0.80011, -0.000976563)
-scale = Vector2(0.435298, 0.915584)
-texture = ExtResource("11_2q5cy")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Floor14"]
-position = Vector2(-0.0339661, -0.000976563)
-scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_7ivcj")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
@@ -2692,7 +2649,7 @@ scale = Vector2(1.79, 0.452)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Floor13"]
 position = Vector2(2.16223, -0.000366211)
@@ -2710,9 +2667,45 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/FloorSquare8"]
+position = Vector2(0.000549316, 0)
+scale = Vector2(1.17647, 1)
+shape = SubResource("RectangleShape2D_3ebx5")
+debug_color = Color(1, 1, 1, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="FloorSquare14" type="StaticBody2D" parent="Sections/Section8"]
+position = Vector2(1057, 496)
+rotation = -1.57079
+scale = Vector2(0.403996, 0.27103)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/FloorSquare14"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+position = Vector2(1.91331e-05, 7.40224e-06)
+scale = Vector2(0.5, 0.915584)
+texture = ExtResource("13_upuuu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/FloorSquare14"]
+position = Vector2(0.000549316, 0)
+scale = Vector2(1.17647, 1)
+shape = SubResource("RectangleShape2D_3ebx5")
+debug_color = Color(1, 1, 1, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="FloorSquare15" type="StaticBody2D" parent="Sections/Section8"]
+position = Vector2(1057, 592)
+rotation = -1.57079
+scale = Vector2(0.403996, 0.27103)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/FloorSquare15"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+position = Vector2(1.91331e-05, 7.40224e-06)
+scale = Vector2(0.5, 0.915584)
+texture = ExtResource("13_upuuu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/FloorSquare15"]
 position = Vector2(0.000549316, 0)
 scale = Vector2(1.17647, 1)
 shape = SubResource("RectangleShape2D_3ebx5")
@@ -2728,7 +2721,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/FloorSquare9"]
 position = Vector2(0.000549316, 0)
@@ -2740,12 +2733,12 @@ metadata/_edit_lock_ = true
 [node name="Platforms" type="Node2D" parent="Sections/Section8"]
 
 [node name="Platform" type="StaticBody2D" parent="Sections/Section8/Platforms"]
-position = Vector2(872, 667)
-scale = Vector2(0.5, 0.5)
+position = Vector2(825, 667)
+scale = Vector2(0.25, 0.25)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Platforms/Platform"]
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Platforms/Platform"]
 scale = Vector2(1.17647, 1)
@@ -2762,7 +2755,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/FloorSquare6"]
 position = Vector2(0.000549316, 0)
@@ -2780,7 +2773,7 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/FloorSquare7"]
 position = Vector2(0.000549316, 0)
@@ -2798,7 +2791,7 @@ scale = Vector2(0.254, 0.227)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/FloorSquare10"]
 position = Vector2(0.000549316, 0)
@@ -2816,7 +2809,7 @@ scale = Vector2(0.254, 0.227)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/FloorSquare13"]
 position = Vector2(0.000549316, 0)
@@ -2834,7 +2827,7 @@ scale = Vector2(0.656889, 0.226987)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/FloorSquare11"]
 position = Vector2(0.000549316, 0)
@@ -2852,7 +2845,7 @@ scale = Vector2(0.656889, 0.226987)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/FloorSquare12"]
 position = Vector2(0.000549316, 0)
@@ -2866,13 +2859,13 @@ position = Vector2(-1271, 0)
 
 [node name="Spikes" type="Area2D" parent="Sections/Section8/Hazards"]
 editor_description = "For spikes"
-position = Vector2(1415, 624)
-scale = Vector2(0.08, 0.08)
+position = Vector2(1440, 624)
+scale = Vector2(0.075, 0.075)
 collision_layer = 3
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Hazards/Spikes"]
 position = Vector2(0.595703, 60)
@@ -2888,7 +2881,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes2"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Hazards/Spikes2"]
 position = Vector2(0.595703, 60)
@@ -2904,7 +2897,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes7"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Hazards/Spikes7"]
 position = Vector2(0.595703, 60)
@@ -2921,7 +2914,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes3"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Hazards/Spikes3"]
 position = Vector2(0.595703, 60)
@@ -2938,7 +2931,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes4"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Hazards/Spikes4"]
 position = Vector2(0.595703, -4.99927)
@@ -2955,7 +2948,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes8"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Hazards/Spikes8"]
 position = Vector2(0.595703, -4.99927)
@@ -2972,7 +2965,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes9"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Hazards/Spikes9"]
 position = Vector2(0.595703, -4.99927)
@@ -2989,7 +2982,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes5"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Hazards/Spikes5"]
 position = Vector2(0.595703, 60)
@@ -3006,7 +2999,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Hazards/Spikes6"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Hazards/Spikes6"]
 position = Vector2(0.595703, -4.99927)
@@ -3014,8 +3007,26 @@ scale = Vector2(60.21, 25)
 shape = SubResource("RectangleShape2D_wyg2k")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
+[node name="Floor15" type="StaticBody2D" parent="Sections/Section8"]
+position = Vector2(97, 544)
+rotation = -1.57079
+scale = Vector2(0.909997, 0.452)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sections/Section8/Floor15"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+position = Vector2(-0.80011, -0.000976563)
+scale = Vector2(0.435298, 0.915584)
+texture = ExtResource("12_i2p2g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section8/Floor15"]
+position = Vector2(-0.0339661, -0.000976563)
+scale = Vector2(1.17647, 1)
+shape = SubResource("RectangleShape2D_7ivcj")
+debug_color = Color(1, 1, 1, 0.42)
+metadata/_edit_lock_ = true
+
 [node name="Section9" type="Node2D" parent="Sections"]
-position = Vector2(8824, 0)
+position = Vector2(8399, 0)
 
 [node name="Floor3" type="StaticBody2D" parent="Sections/Section9"]
 position = Vector2(1281, 684)
@@ -3024,11 +3035,11 @@ scale = Vector2(0.85, 1)
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Floor3"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 scale = Vector2(1, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/Floor3"]
 scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_1uwx4")
+shape = SubResource("RectangleShape2D_ityu6")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
@@ -3040,12 +3051,12 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/Floor8"]
 position = Vector2(2.16223, -0.000366211)
 scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_xxb1o")
+shape = SubResource("RectangleShape2D_wmm3g")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
@@ -3057,12 +3068,12 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/Floor9"]
 position = Vector2(2.16223, -0.000366211)
 scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_xxb1o")
+shape = SubResource("RectangleShape2D_wmm3g")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
@@ -3074,12 +3085,12 @@ scale = Vector2(1.60012, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/Floor11"]
 position = Vector2(2.16223, -0.000366211)
 scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_xxb1o")
+shape = SubResource("RectangleShape2D_wmm3g")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
@@ -3092,12 +3103,12 @@ scale = Vector2(1.60012, 0.891726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/Floor12"]
 position = Vector2(2.16223, -0.000366211)
 scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_xxb1o")
+shape = SubResource("RectangleShape2D_wmm3g")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
@@ -3109,12 +3120,12 @@ scale = Vector2(2.40711, 0.451726)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(-0.829468, -0.000244141)
 scale = Vector2(0.388289, 0.915584)
-texture = ExtResource("11_2q5cy")
+texture = ExtResource("12_i2p2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/Floor10"]
 position = Vector2(-0.241058, -0.000366211)
 scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_15n2k")
+shape = SubResource("RectangleShape2D_e37s1")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
@@ -3129,12 +3140,12 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/FloorSquare"]
 position = Vector2(0.000549316, 0)
 scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_3ebx5")
+shape = SubResource("RectangleShape2D_r3lcl")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
@@ -3147,12 +3158,12 @@ scale = Vector2(0.656889, 0.226987)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/FloorSquare3"]
 position = Vector2(0.000549316, 0)
 scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_3ebx5")
+shape = SubResource("RectangleShape2D_r3lcl")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
@@ -3165,12 +3176,12 @@ scale = Vector2(0.656889, 0.226987)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/FloorSquare4"]
 position = Vector2(0.000549316, 0)
 scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_3ebx5")
+shape = SubResource("RectangleShape2D_r3lcl")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
@@ -3186,12 +3197,12 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Hazards/Spikes"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/Hazards/Spikes"]
 position = Vector2(0.595703, 60)
 scale = Vector2(60.21, 25)
-shape = SubResource("RectangleShape2D_wyg2k")
+shape = SubResource("RectangleShape2D_tmn2u")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
 [node name="Spikes2" type="Area2D" parent="Sections/Section9/Hazards"]
@@ -3202,12 +3213,12 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Hazards/Spikes2"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/Hazards/Spikes2"]
 position = Vector2(0.595703, -4.99927)
 scale = Vector2(60.21, 25)
-shape = SubResource("RectangleShape2D_wyg2k")
+shape = SubResource("RectangleShape2D_tmn2u")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
 [node name="Spikes3" type="Area2D" parent="Sections/Section9/Hazards"]
@@ -3219,12 +3230,12 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Hazards/Spikes3"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/Hazards/Spikes3"]
 position = Vector2(0.595703, 60)
 scale = Vector2(60.21, 25)
-shape = SubResource("RectangleShape2D_wyg2k")
+shape = SubResource("RectangleShape2D_tmn2u")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
 [node name="Spikes4" type="Area2D" parent="Sections/Section9/Hazards"]
@@ -3235,12 +3246,12 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Hazards/Spikes4"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/Hazards/Spikes4"]
 position = Vector2(0.595703, -4.99927)
 scale = Vector2(60.21, 25)
-shape = SubResource("RectangleShape2D_wyg2k")
+shape = SubResource("RectangleShape2D_tmn2u")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
 [node name="Spikes13" type="Area2D" parent="Sections/Section9/Hazards"]
@@ -3252,28 +3263,28 @@ collision_layer = 3
 collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Hazards/Spikes13"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section9/Hazards/Spikes13"]
 position = Vector2(-1466.67, 0.00651571)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Sections/Section9/Hazards/Spikes13"]
 position = Vector2(-2933.33, 0.0130314)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Sections/Section9/Hazards/Spikes13"]
 position = Vector2(-4533.33, 0.0201395)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D5" type="Sprite2D" parent="Sections/Section9/Hazards/Spikes13"]
 position = Vector2(-6133.33, 0.0150405)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/Hazards/Spikes13"]
 position = Vector2(-2933.33, 0.00741071)
 scale = Vector2(464.791, 25)
-shape = SubResource("RectangleShape2D_wyg2k")
+shape = SubResource("RectangleShape2D_tmn2u")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
 [node name="FloorSquare2" type="StaticBody2D" parent="Sections/Section9"]
@@ -3285,12 +3296,12 @@ scale = Vector2(0.6, 0.536)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/FloorSquare2"]
 position = Vector2(0.000549316, 0)
 scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_3ebx5")
+shape = SubResource("RectangleShape2D_r3lcl")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
@@ -3303,16 +3314,16 @@ collision_layer = 3
 collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Spikes5"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section9/Spikes5"]
 position = Vector2(1600, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/Spikes5"]
 position = Vector2(766.667, 0.00187249)
 scale = Vector2(190.333, 25)
-shape = SubResource("RectangleShape2D_wyg2k")
+shape = SubResource("RectangleShape2D_tmn2u")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
 [node name="Spikes6" type="Area2D" parent="Sections/Section9"]
@@ -3324,16 +3335,16 @@ collision_layer = 3
 collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Spikes6"]
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section9/Spikes6"]
 position = Vector2(1600, -0.000254313)
-texture = ExtResource("14_qnwq0")
+texture = ExtResource("14_bdanr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/Spikes6"]
 position = Vector2(766.667, 0.00187249)
 scale = Vector2(190.333, 25)
-shape = SubResource("RectangleShape2D_wyg2k")
+shape = SubResource("RectangleShape2D_tmn2u")
 debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
 [node name="FloorSquare8" type="StaticBody2D" parent="Sections/Section9"]
@@ -3345,62 +3356,11 @@ scale = Vector2(0.404, 0.361)
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_yxqma")
+texture = ExtResource("13_upuuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section9/FloorSquare8"]
 position = Vector2(0.000549316, 0)
 scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_3ebx5")
+shape = SubResource("RectangleShape2D_r3lcl")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
-
-[node name="Restart" type="Area2D" parent="."]
-position = Vector2(720, 864)
-rotation = 1.5708
-scale = Vector2(0.4048, -1.9548)
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Restart"]
-position = Vector2(0, 0.517639)
-shape = SubResource("RectangleShape2D_a7f6b")
-debug_color = Color(0.999102, 0, 0.123544, 0.42)
-
-[connection signal="area_entered" from="CanvasLayer/Platforms_UI/NoCreationArea" to="Mouse" method="_on_no_creation_area_area_entered"]
-[connection signal="area_exited" from="CanvasLayer/Platforms_UI/NoCreationArea" to="Mouse" method="_on_no_creation_area_area_exited"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes7" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes19" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes6" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes5" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes4" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes3" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes10" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes11" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes12" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes17" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes15" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes16" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes18" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes2" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes13" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes14" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes9" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section7/Maze/Hazards/Spikes8" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section8/Hazards/Spikes" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section8/Hazards/Spikes2" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section8/Hazards/Spikes7" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section8/Hazards/Spikes3" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section8/Hazards/Spikes4" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section8/Hazards/Spikes8" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section8/Hazards/Spikes9" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section8/Hazards/Spikes5" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section8/Hazards/Spikes6" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section9/Hazards/Spikes" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section9/Hazards/Spikes2" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section9/Hazards/Spikes3" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section9/Hazards/Spikes4" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section9/Hazards/Spikes13" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section9/Spikes5" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Sections/Section9/Spikes6" to="lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Restart" to="lab_rat" method="_on_restart_area_entered"]
