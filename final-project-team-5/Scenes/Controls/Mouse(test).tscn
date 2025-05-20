@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dtpc8fyxxen3a" path="res://Scenes/Tests/Particles.tscn" id="6_phouw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cndw4"]
+radius = 3.0
 
 [node name="Mouse" type="Node2D" node_paths=PackedStringArray("MouseCollider")]
 script = ExtResource("1_lq2nf")
@@ -23,10 +24,11 @@ visible = false
 texture = ExtResource("4_yufuk")
 
 [node name="MouseCollider" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 6
+collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MouseCollider"]
+position = Vector2(0, 16)
 scale = Vector2(4, 4)
 shape = SubResource("CircleShape2D_cndw4")
 
