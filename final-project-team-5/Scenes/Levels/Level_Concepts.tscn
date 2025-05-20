@@ -2084,7 +2084,6 @@ collision_mask = 2
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes15"]
 position = Vector2(0, 0.00292969)
-scale = Vector2(1, 1)
 texture = ExtResource("14_qnwq0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes15"]
@@ -2102,7 +2101,6 @@ collision_mask = 2
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes16"]
 position = Vector2(0, 0.00292969)
-scale = Vector2(1, 1)
 texture = ExtResource("14_qnwq0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes16"]
@@ -2120,7 +2118,6 @@ collision_mask = 2
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sections/Section7/Maze/Hazards/Spikes18"]
 position = Vector2(0, 0.00292969)
-scale = Vector2(1, 1)
 texture = ExtResource("14_qnwq0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section7/Maze/Hazards/Spikes18"]
