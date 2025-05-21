@@ -17,3 +17,7 @@ func GamePaused():
 		Engine.time_scale = 0
 		
 	paused = !paused
+
+
+func _on_return_to_game_pressed():
+	GamePaused()

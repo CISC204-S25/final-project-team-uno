@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyryt3kh0yckn"]
+[gd_scene load_steps=3 format=3 uid="uid://dyryt3kh0yckn"]
 
 [ext_resource type="Script" path="res://Scripts/UI/exit.gd" id="1_7mewq"]
+[ext_resource type="Script" path="res://Scripts/UI/play_game.gd" id="1_yk5e3"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -39,6 +40,7 @@ offset_top = 179.0
 offset_right = 725.0
 offset_bottom = 242.0
 text = "Play Game"
+script = ExtResource("1_yk5e3")
 
 [node name="Exit" type="Button" parent="."]
 layout_mode = 0
@@ -49,4 +51,5 @@ offset_bottom = 359.0
 text = "Exit"
 script = ExtResource("1_7mewq")
 
+[connection signal="pressed" from="Play Game" to="Play Game" method="_on_pressed"]
 [connection signal="pressed" from="Exit" to="Exit" method="_on_Button_pressed"]

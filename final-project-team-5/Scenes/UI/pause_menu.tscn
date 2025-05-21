@@ -69,4 +69,5 @@ offset_bottom = 313.125
 text = "Main Menu"
 script = ExtResource("1_hdmo1")
 
+[connection signal="pressed" from="Return to Game" to="." method="_on_return_to_game_pressed"]
 [connection signal="pressed" from="Main Menu" to="Main Menu" method="_button_pressed"]
