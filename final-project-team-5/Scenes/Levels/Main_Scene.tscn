@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://ducdw1i7ifhdl"]
+[gd_scene load_steps=42 format=3 uid="uid://ducdw1i7ifhdl"]
 
 [ext_resource type="Texture2D" uid="uid://c52q6pbjs5goq" path="res://Assets/Art/Background/IMG_2413.png" id="1_gj7jd"]
 [ext_resource type="Texture2D" uid="uid://cciju1soxdtq3" path="res://Assets/Art/Background/IMG_2414.png" id="2_3tgw7"]
@@ -8,23 +8,27 @@
 [ext_resource type="PackedScene" uid="uid://df43qcss8ni3q" path="res://Scenes/Levels/Level_Designs.tscn" id="6_5kygh"]
 [ext_resource type="Texture2D" uid="uid://3oaboc3tqqeg" path="res://Assets/Art/Background/Boss_fight.png" id="6_epeco"]
 [ext_resource type="PackedScene" uid="uid://qcvq23wx47yq" path="res://Scenes/Player Driven (placeholder name)/Lab_rat(Duplicated-different_test).tscn" id="7_hxgxy"]
-[ext_resource type="Texture2D" uid="uid://c1i71jgyndjbs" path="res://Assets/Art/Background/Boss_fight_with_light.png" id="7_mhahq"]
+[ext_resource type="Texture2D" uid="uid://c1i71jgyndjbs" path="res://Assets/Art/Background/Boss_Fight_with_light.png" id="7_mhahq"]
 [ext_resource type="PackedScene" uid="uid://cxmh5b0isjx5" path="res://Scenes/Interactions/medal.tscn" id="7_pbs4y"]
-[ext_resource type="Script" path="res://Scripts/Interactions/key_doors.gd" id="7_pj8wq"]
+[ext_resource type="Script" uid="uid://6ajvcisq2orm" path="res://Scripts/Interactions/key_doors.gd" id="7_pj8wq"]
+[ext_resource type="AudioStream" uid="uid://cjlaopup8gh1i" path="res://Music/failure_music.mp3" id="8_6fpxr"]
 [ext_resource type="Texture2D" uid="uid://bve3msu27kb1f" path="res://Assets/Art/assets/lab access card.png" id="8_l8eyt"]
 [ext_resource type="Texture2D" uid="uid://csndm4u3vkolc" path="res://Assets/Art/assets/100500203_oiOOi4vzb92vlpT.png" id="8_nqbts"]
-[ext_resource type="Script" path="res://Scripts/camera_locations.gd" id="8_rq7ja"]
+[ext_resource type="Script" uid="uid://51lm5jr0nnsg" path="res://Scripts/camera_locations.gd" id="8_rq7ja"]
 [ext_resource type="PackedScene" uid="uid://bghihldvt834d" path="res://Scenes/Controls/CameraManager.tscn" id="8_ymyqn"]
-[ext_resource type="Script" path="res://Scripts/Globals/global_camera_manager.gd" id="9_0sv3t"]
-[ext_resource type="Script" path="res://Scripts/_other/secret_interaction.gd" id="9_g5a0c"]
+[ext_resource type="Script" uid="uid://2gwjp377ct8p" path="res://Scripts/Globals/global_camera_manager.gd" id="9_0sv3t"]
+[ext_resource type="Script" uid="uid://c5qym3242osah" path="res://Scripts/_other/secret_interaction.gd" id="9_g5a0c"]
 [ext_resource type="Texture2D" uid="uid://bx1nnioblgp34" path="res://Assets/Art/assets/Door.png" id="9_lqjf6"]
-[ext_resource type="Script" path="res://Scripts/Globals/global_platform_organizing.gd" id="10_7bb0v"]
+[ext_resource type="Script" uid="uid://hwwnwlbjdc3n" path="res://Scripts/Globals/global_platform_organizing.gd" id="10_7bb0v"]
 [ext_resource type="PackedScene" uid="uid://ceyp7ov5d8n1" path="res://Scenes/Controls/Mouse(test).tscn" id="11_loekj"]
-[ext_resource type="Script" path="res://Scripts/buddy_position.gd" id="13_vl8pb"]
+[ext_resource type="Script" uid="uid://1ovudlqdr5x1" path="res://Scripts/buddy_position.gd" id="13_vl8pb"]
+[ext_resource type="Script" uid="uid://y4smy7tq5ds7" path="res://Scenes/Levels/music trigger.gd" id="15_fclr6"]
 [ext_resource type="Texture2D" uid="uid://wh273422i4vk" path="res://Assets/Art/assets/Platform.png" id="15_rfm2y"]
 [ext_resource type="Texture2D" uid="uid://dv2mpgxxq3i6h" path="res://Assets/Art/assets/bossfight.png" id="16_2f8fy"]
+[ext_resource type="AudioStream" uid="uid://b5kr3i57o3x6n" path="res://Music/Alert_Breach (1).mp3" id="16_6fpxr"]
 [ext_resource type="PackedScene" uid="uid://ko2ylqjq3v2j" path="res://Scenes/UI/pause_menu.tscn" id="24_mn0ce"]
-[ext_resource type="PackedScene" uid="uid://fp3qpoi077l5" path="res://Scenes/UI/stats_ui.tscn" id="25_10lv0"]
+[ext_resource type="AudioStream" uid="uid://xep6aax8hxko" path="res://Music/soundtrck.mp3" id="25_mqfsa"]
+[ext_resource type="Script" uid="uid://dvbkyjpi2sqyt" path="res://Scenes/Levels/MainSceneMusic.gd" id="26_mqfsa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k25q7"]
 size = Vector2(138, 457)
@@ -126,7 +130,7 @@ position = Vector2(8128, 360)
 texture = ExtResource("4_pyd0y")
 
 [node name="Sprite2D6" type="Sprite2D" parent="backgrounds/FloorlessBackground (Dark)"]
-position = Vector2(9360, 360)
+position = Vector2(9293, 388)
 texture = ExtResource("4_pyd0y")
 
 [node name="Sprite2D7" type="Sprite2D" parent="backgrounds/FloorlessBackground (Dark)"]
@@ -159,6 +163,10 @@ position = Vector2(0.00311163, -14.2195)
 scale = Vector2(1, 1.03555)
 shape = SubResource("RectangleShape2D_k25q7")
 debug_color = Color(0.999102, 0, 0.123544, 0.42)
+
+[node name="Failure" type="AudioStreamPlayer2D" parent="Restart/CollisionShape2D2"]
+position = Vector2(11.5178, -90.6205)
+stream = ExtResource("8_6fpxr")
 
 [node name="Levels" parent="." instance=ExtResource("6_5kygh")]
 
@@ -764,6 +772,7 @@ collision_mask = 2
 position = Vector2(504, 332)
 scale = Vector2(12, 3)
 shape = SubResource("RectangleShape2D_0uopv")
+script = ExtResource("15_fclr6")
 
 [node name="Section 7" type="Node2D" parent="Levels/Interactions"]
 position = Vector2(7512, 24)
@@ -867,6 +876,17 @@ scale = Vector2(0.4, 0.4)
 jumpVelocity = -375.0
 friction = 0.15
 gravityPull = 65
+
+[node name="MainLevelMusic" type="AudioStreamPlayer2D" parent="Players/lab_rat"]
+position = Vector2(-480, -1300)
+scale = Vector2(2.5, 2.5)
+stream = ExtResource("25_mqfsa")
+autoplay = true
+parameters/looping = true
+script = ExtResource("26_mqfsa")
+
+[node name="Alert-Breach" type="AudioStreamPlayer" parent="Players/lab_rat"]
+stream = ExtResource("16_6fpxr")
 
 [node name="FollowPlayerCamera" type="Camera2D" parent="Players/lab_rat"]
 unique_name_in_owner = true
@@ -1126,9 +1146,6 @@ position = Vector2(9944, 320)
 
 [node name="Pause Menu" parent="UI/CanvasLayer" instance=ExtResource("24_mn0ce")]
 visible = false
-
-[node name="stats_ui" parent="UI/CanvasLayer" instance=ExtResource("25_10lv0")]
-position = Vector2(40, 40)
 
 [connection signal="area_entered" from="Restart" to="Players/lab_rat" method="_on_restart_area_entered"]
 [connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes" to="Players/lab_rat" method="_on_death_block_area_entered"]
