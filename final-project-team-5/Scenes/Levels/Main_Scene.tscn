@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://ducdw1i7ifhdl"]
+[gd_scene load_steps=37 format=3 uid="uid://ducdw1i7ifhdl"]
 
 [ext_resource type="Texture2D" uid="uid://c52q6pbjs5goq" path="res://Assets/Art/Background/IMG_2413.png" id="1_gj7jd"]
 [ext_resource type="Texture2D" uid="uid://cciju1soxdtq3" path="res://Assets/Art/Background/IMG_2414.png" id="2_3tgw7"]
@@ -23,6 +23,7 @@
 [ext_resource type="Script" path="res://Scripts/buddy_position.gd" id="13_vl8pb"]
 [ext_resource type="Texture2D" uid="uid://wh273422i4vk" path="res://Assets/Art/assets/Platform.png" id="15_rfm2y"]
 [ext_resource type="Texture2D" uid="uid://dv2mpgxxq3i6h" path="res://Assets/Art/assets/bossfight.png" id="16_2f8fy"]
+[ext_resource type="PackedScene" uid="uid://ko2ylqjq3v2j" path="res://Scenes/UI/pause_menu.tscn" id="24_mn0ce"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k25q7"]
 size = Vector2(138, 457)
@@ -1117,6 +1118,13 @@ position = Vector2(8803, 320)
 
 [node name="BuddyPositionMarker9" type="Marker2D" parent="Buddy Position"]
 position = Vector2(9944, 320)
+
+[node name="UI" type="Node" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UI"]
+
+[node name="Pause Menu" parent="UI/CanvasLayer" instance=ExtResource("24_mn0ce")]
+visible = false
 
 [connection signal="area_entered" from="Restart" to="Players/lab_rat" method="_on_restart_area_entered"]
 [connection signal="area_entered" from="Levels/Hazards/Section 7/Spikes" to="Players/lab_rat" method="_on_death_block_area_entered"]

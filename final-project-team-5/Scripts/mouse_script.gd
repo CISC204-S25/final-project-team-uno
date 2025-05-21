@@ -12,6 +12,7 @@ var target = global_position
 var NoCreation: bool = false #Disables the ability to create platforms in certain areas...
 	#...or parts of the game
 
+var gamepaused: bool = false
 var PlatformLimit: int
 
 # Called when the node enters the scene tree for the first time.
@@ -23,7 +24,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	PlatformLimit = GlobalPlatformOrganizing.PlatformLimit
-	#pass
+	if Input.is_action_just_pressed("pause"):
+		GamePausing()
 	#print(PlatformLimit)
 	#print(NoCreation)
 	ChangingDrone()
@@ -57,3 +59,10 @@ func _on_no_creation_area_area_entered(_area):
 
 func _on_no_creation_area_area_exited(_area):
 	NoCreation = false
+
+func GamePausing():
+	if gamepaused == true:
+		NoCreation = false
+	else:
+		NoCreation = true
+	gamepaused = !gamepaused
