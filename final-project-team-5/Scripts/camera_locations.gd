@@ -14,6 +14,7 @@ signal CameraLocation6
 signal CameraLocation7
 signal CameraLocation8
 signal CameraLocation9
+signal CameraLocation10
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -45,6 +46,8 @@ func _CameraLocation():
 		CameraLocation8.emit()
 	if GlobalCameraManager.camera_location == 9:
 		CameraLocation9.emit()
+	if GlobalCameraManager.camera_location == 10:
+		CameraLocation10.emit()
 
 
 
@@ -74,3 +77,6 @@ func _on_camera_location_8():
 
 func _on_camera_location_9():
 	SceneCamera.set_position(CameraMarkerArray[8])
+
+func _on_camera_location_10():
+	SceneCamera.set_position(CameraMarkerArray[9])

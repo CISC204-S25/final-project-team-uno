@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://ducdw1i7ifhdl"]
+[gd_scene load_steps=25 format=3 uid="uid://ducdw1i7ifhdl"]
 
 [ext_resource type="Texture2D" uid="uid://c52q6pbjs5goq" path="res://Assets/Art/Background/IMG_2413.png" id="1_gj7jd"]
 [ext_resource type="Texture2D" uid="uid://cciju1soxdtq3" path="res://Assets/Art/Background/IMG_2414.png" id="2_3tgw7"]
@@ -6,23 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://dwy5jt2rweuuy" path="res://Assets/Art/Background/IMG_2415.png" id="4_pyd0y"]
 [ext_resource type="Texture2D" uid="uid://cxymmfobhl78v" path="res://Assets/Art/Background/IMG_2473.png" id="5_n7s37"]
 [ext_resource type="PackedScene" uid="uid://df43qcss8ni3q" path="res://Scenes/Levels/Level_Designs.tscn" id="6_5kygh"]
-[ext_resource type="Texture2D" uid="uid://3oaboc3tqqeg" path="res://Assets/Art/Background/Boss_fight.png" id="6_epeco"]
 [ext_resource type="PackedScene" uid="uid://qcvq23wx47yq" path="res://Scenes/Player Driven (placeholder name)/Lab_rat(Duplicated-different_test).tscn" id="7_hxgxy"]
-[ext_resource type="Texture2D" uid="uid://c1i71jgyndjbs" path="res://Assets/Art/Background/Boss_fight_with_light.png" id="7_mhahq"]
 [ext_resource type="PackedScene" uid="uid://cxmh5b0isjx5" path="res://Scenes/Interactions/medal.tscn" id="7_pbs4y"]
-[ext_resource type="Script" path="res://Scripts/Interactions/key_doors.gd" id="7_pj8wq"]
-[ext_resource type="Texture2D" uid="uid://bve3msu27kb1f" path="res://Assets/Art/assets/lab access card.png" id="8_l8eyt"]
 [ext_resource type="Texture2D" uid="uid://csndm4u3vkolc" path="res://Assets/Art/assets/100500203_oiOOi4vzb92vlpT.png" id="8_nqbts"]
 [ext_resource type="Script" path="res://Scripts/camera_locations.gd" id="8_rq7ja"]
 [ext_resource type="PackedScene" uid="uid://bghihldvt834d" path="res://Scenes/Controls/CameraManager.tscn" id="8_ymyqn"]
 [ext_resource type="Script" path="res://Scripts/Globals/global_camera_manager.gd" id="9_0sv3t"]
 [ext_resource type="Script" path="res://Scripts/_other/secret_interaction.gd" id="9_g5a0c"]
-[ext_resource type="Texture2D" uid="uid://bx1nnioblgp34" path="res://Assets/Art/assets/Door.png" id="9_lqjf6"]
 [ext_resource type="Script" path="res://Scripts/Globals/global_platform_organizing.gd" id="10_7bb0v"]
 [ext_resource type="PackedScene" uid="uid://ceyp7ov5d8n1" path="res://Scenes/Controls/Mouse(test).tscn" id="11_loekj"]
 [ext_resource type="Script" path="res://Scripts/buddy_position.gd" id="13_vl8pb"]
-[ext_resource type="Texture2D" uid="uid://wh273422i4vk" path="res://Assets/Art/assets/Platform.png" id="15_rfm2y"]
-[ext_resource type="Texture2D" uid="uid://dv2mpgxxq3i6h" path="res://Assets/Art/assets/bossfight.png" id="16_2f8fy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k25q7"]
 size = Vector2(138, 457)
@@ -36,22 +29,13 @@ size = Vector2(15.8035, 25.2)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emv06"]
 size = Vector2(15.8035, 25.2)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrarh"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqm3n"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2cxf"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ylbeo"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ax8wm"]
 size = Vector2(212, 352)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0uopv"]
-size = Vector2(85.3333, 220.667)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8qnj"]
+size = Vector2(212, 352)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2tmhw"]
-size = Vector2(424, 72)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydqhw"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2cxf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lg3an"]
 size = Vector2(30, 658)
@@ -130,20 +114,6 @@ texture = ExtResource("4_pyd0y")
 [node name="Sprite2D7" type="Sprite2D" parent="backgrounds/FloorlessBackground (Dark)"]
 position = Vector2(10512, 360)
 texture = ExtResource("4_pyd0y")
-
-[node name="BossFightBackground" type="Node2D" parent="backgrounds"]
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="backgrounds/BossFightBackground"]
-visible = false
-position = Vector2(640, 360)
-texture = ExtResource("6_epeco")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D2" type="Sprite2D" parent="backgrounds/BossFightBackground"]
-position = Vector2(11792, 360)
-texture = ExtResource("7_mhahq")
-metadata/_edit_lock_ = true
 
 [node name="Restart" type="Area2D" parent="."]
 position = Vector2(5976, 864)
@@ -646,13 +616,6 @@ debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 
 [node name="Interactions" type="Node2D" parent="Levels"]
 
-[node name="KeyDoors" type="Node2D" parent="Levels/Interactions" node_paths=PackedStringArray("Key1", "Door1", "Key2", "Door2")]
-script = ExtResource("7_pj8wq")
-Key1 = NodePath("../Section 2/keycard")
-Door1 = NodePath("../Section 2/LockDoor")
-Key2 = NodePath("../Section 7/keycard2")
-Door2 = NodePath("../Section 7/LockDoor2")
-
 [node name="Section 1" type="Node2D" parent="Levels/Interactions"]
 
 [node name="Medal" parent="Levels/Interactions/Section 1" instance=ExtResource("7_pbs4y")]
@@ -663,29 +626,6 @@ position = Vector2(1240, 4)
 
 [node name="Medal" parent="Levels/Interactions/Section 2" instance=ExtResource("7_pbs4y")]
 position = Vector2(1008, 612)
-
-[node name="keycard" type="Area2D" parent="Levels/Interactions/Section 2"]
-position = Vector2(168, 295)
-
-[node name="Sprite2D" type="Sprite2D" parent="Levels/Interactions/Section 2/keycard"]
-modulate = Color(0, 1, 1, 1)
-position = Vector2(-1.9, 4.05)
-scale = Vector2(0.05, 0.071)
-texture = ExtResource("8_l8eyt")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Interactions/Section 2/keycard"]
-position = Vector2(0, 5)
-shape = SubResource("RectangleShape2D_vrarh")
-
-[node name="LockDoor" type="StaticBody2D" parent="Levels/Interactions/Section 2"]
-position = Vector2(1256, 505)
-
-[node name="Sprite2D" type="Sprite2D" parent="Levels/Interactions/Section 2/LockDoor"]
-texture = ExtResource("9_lqjf6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Interactions/Section 2/LockDoor"]
-scale = Vector2(1, 14.04)
-shape = SubResource("RectangleShape2D_aqm3n")
 
 [node name="Section 3" type="Node2D" parent="Levels/Interactions"]
 position = Vector2(2672, 4)
@@ -705,48 +645,51 @@ position = Vector2(4960, 24)
 [node name="Medal" parent="Levels/Interactions/Section 5" instance=ExtResource("7_pbs4y")]
 position = Vector2(200, 547)
 
-[node name="SecretArea2D" type="Area2D" parent="Levels/Interactions/Section 5"]
+[node name="FloorSquares" type="Node2D" parent="Levels/Interactions/Section 5"]
+
+[node name="FloorSquare(Move)" type="StaticBody2D" parent="Levels/Interactions/Section 5/FloorSquares"]
+position = Vector2(320, 476)
+rotation = -1.57079
+scale = Vector2(0.404, 0.361)
+
+[node name="Sprite2D" type="Sprite2D" parent="Levels/Interactions/Section 5/FloorSquares/FloorSquare(Move)"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+position = Vector2(1.91331e-05, 7.40224e-06)
+scale = Vector2(0.5, 0.915584)
+texture = ExtResource("8_nqbts")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Interactions/Section 5/FloorSquares/FloorSquare(Move)"]
+position = Vector2(0.000549316, 0)
+scale = Vector2(1.17647, 1)
+shape = SubResource("RectangleShape2D_ax8wm")
+debug_color = Color(1, 1, 1, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="FloorSquare(Move)2" type="StaticBody2D" parent="Levels/Interactions/Section 5/FloorSquares"]
+position = Vector2(320, 572)
+rotation = -1.57079
+scale = Vector2(0.404, 0.361)
+
+[node name="Sprite2D" type="Sprite2D" parent="Levels/Interactions/Section 5/FloorSquares/FloorSquare(Move)2"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+position = Vector2(1.91331e-05, 7.40224e-06)
+scale = Vector2(0.5, 0.915584)
+texture = ExtResource("8_nqbts")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Interactions/Section 5/FloorSquares/FloorSquare(Move)2"]
+position = Vector2(0.000549316, 0)
+scale = Vector2(1.17647, 1)
+shape = SubResource("RectangleShape2D_l8qnj")
+debug_color = Color(1, 1, 1, 0.42)
+metadata/_edit_lock_ = true
+
+[node name="SecretArea2D" type="Area2D" parent="Levels/Interactions/Section 5" node_paths=PackedStringArray("FloorSquares")]
 position = Vector2(920, -72)
 script = ExtResource("9_g5a0c")
+FloorSquares = NodePath("../FloorSquares")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Interactions/Section 5/SecretArea2D"]
 shape = SubResource("RectangleShape2D_v2cxf")
-
-[node name="Floorsquares" type="Node2D" parent="Levels/Interactions/Section 5"]
-
-[node name="FloorSquare(Move)" type="StaticBody2D" parent="Levels/Interactions/Section 5/Floorsquares"]
-position = Vector2(320, 480)
-rotation = -1.57079
-scale = Vector2(0.404, 0.361)
-
-[node name="Sprite2D" type="Sprite2D" parent="Levels/Interactions/Section 5/Floorsquares/FloorSquare(Move)"]
-modulate = Color(0.423651, 0.423651, 0.423651, 1)
-position = Vector2(1.91331e-05, 7.40224e-06)
-scale = Vector2(0.5, 0.915584)
-texture = ExtResource("8_nqbts")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Interactions/Section 5/Floorsquares/FloorSquare(Move)"]
-position = Vector2(0.000549316, 0)
-scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_ylbeo")
-debug_color = Color(1, 1, 1, 0.42)
-
-[node name="FloorSquare(Move)2" type="StaticBody2D" parent="Levels/Interactions/Section 5/Floorsquares"]
-position = Vector2(320, 576)
-rotation = -1.57079
-scale = Vector2(0.404, 0.361)
-
-[node name="Sprite2D" type="Sprite2D" parent="Levels/Interactions/Section 5/Floorsquares/FloorSquare(Move)2"]
-modulate = Color(0.423651, 0.423651, 0.423651, 1)
-position = Vector2(1.91331e-05, 7.40224e-06)
-scale = Vector2(0.5, 0.915584)
-texture = ExtResource("8_nqbts")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Interactions/Section 5/Floorsquares/FloorSquare(Move)2"]
-position = Vector2(0.000549316, 0)
-scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_ylbeo")
-debug_color = Color(1, 1, 1, 0.42)
 
 [node name="Section 6" type="Node2D" parent="Levels/Interactions"]
 position = Vector2(6336, 25)
@@ -754,45 +697,11 @@ position = Vector2(6336, 25)
 [node name="Medal" parent="Levels/Interactions/Section 6" instance=ExtResource("7_pbs4y")]
 position = Vector2(1048, 175)
 
-[node name="NoCreationArea" type="Area2D" parent="Levels/Interactions/Section 6"]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Interactions/Section 6/NoCreationArea"]
-position = Vector2(504, 332)
-scale = Vector2(12, 3)
-shape = SubResource("RectangleShape2D_0uopv")
-
 [node name="Section 7" type="Node2D" parent="Levels/Interactions"]
 position = Vector2(7512, 24)
 
 [node name="Medal" parent="Levels/Interactions/Section 7" instance=ExtResource("7_pbs4y")]
 position = Vector2(1120, 358)
-
-[node name="LockDoor2" type="StaticBody2D" parent="Levels/Interactions/Section 7"]
-position = Vector2(1080, 280)
-
-[node name="Sprite2D" type="Sprite2D" parent="Levels/Interactions/Section 7/LockDoor2"]
-texture = ExtResource("9_lqjf6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Interactions/Section 7/LockDoor2"]
-scale = Vector2(1, 14.04)
-shape = SubResource("RectangleShape2D_aqm3n")
-
-[node name="keycard2" type="Area2D" parent="Levels/Interactions/Section 7"]
-position = Vector2(784, 80)
-collision_layer = 2
-collision_mask = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Levels/Interactions/Section 7/keycard2"]
-modulate = Color(0.568627, 1, 1, 1)
-position = Vector2(-1.9, 4.05)
-scale = Vector2(0.05, 0.071)
-texture = ExtResource("8_l8eyt")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Interactions/Section 7/keycard2"]
-position = Vector2(0, 5)
-shape = SubResource("RectangleShape2D_vrarh")
 
 [node name="Section 8" type="Node2D" parent="Levels/Interactions"]
 position = Vector2(8800, 31)
@@ -805,57 +714,6 @@ position = Vector2(9944, 25)
 
 [node name="Medal" parent="Levels/Interactions/Section 9" instance=ExtResource("7_pbs4y")]
 position = Vector2(1072, 188)
-
-[node name="Boss" type="Node2D" parent="Levels"]
-
-[node name="Floor3" type="StaticBody2D" parent="Levels/Boss"]
-position = Vector2(11800, 684)
-scale = Vector2(2.53004, 1)
-
-[node name="Sprite2D" type="Sprite2D" parent="Levels/Boss/Floor3"]
-visible = false
-modulate = Color(0.423651, 0.423651, 0.423651, 1)
-scale = Vector2(1, 0.915584)
-texture = ExtResource("15_rfm2y")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Boss/Floor3"]
-scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_2tmhw")
-debug_color = Color(1, 1, 1, 0.42)
-metadata/_edit_lock_ = true
-
-[node name="Floor4" type="StaticBody2D" parent="Levels/Boss"]
-position = Vector2(12160, 280)
-rotation = 1.57079
-scale = Vector2(2.53004, 1)
-
-[node name="Sprite2D" type="Sprite2D" parent="Levels/Boss/Floor4"]
-visible = false
-modulate = Color(0.423651, 0.423651, 0.423651, 1)
-scale = Vector2(1, 0.915584)
-texture = ExtResource("15_rfm2y")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Boss/Floor4"]
-scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_2tmhw")
-debug_color = Color(1, 1, 1, 0.42)
-metadata/_edit_lock_ = true
-
-[node name="Boss" type="StaticBody2D" parent="Levels/Boss"]
-
-[node name="Sprite2D" type="Sprite2D" parent="Levels/Boss/Boss"]
-position = Vector2(12184, 367)
-scale = Vector2(0.677872, 0.678441)
-texture = ExtResource("16_2f8fy")
-metadata/_edit_lock_ = true
-
-[node name="Completed" type="Node2D" parent="Levels/Boss"]
-
-[node name="Area2D" type="Area2D" parent="Levels/Boss/Completed"]
-position = Vector2(12032, 392)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/Boss/Completed/Area2D"]
-shape = SubResource("RectangleShape2D_ydqhw")
 
 [node name="Players" type="Node2D" parent="."]
 
@@ -888,7 +746,7 @@ scale = Vector2(0.45, 0.45)
 [node name="CameraMarker" type="Node2D" parent="CameraManaging" node_paths=PackedStringArray("SceneCamera")]
 script = ExtResource("8_rq7ja")
 SceneCamera = NodePath("../SceneCamera")
-CameraMarkerArray = [Vector2(616, 368), Vector2i(1920, 368), Vector2(3176, 368), Vector2(4472, 368), Vector2(5664, 368), Vector2(6848, 368), Vector2(8064, 368), Vector2(9246, 368), Vector2(10496, 368), Vector2(11776, 368)]
+CameraMarkerArray = [Vector2(616, 368), Vector2i(1920, 368), Vector2(3176, 368), Vector2(4472, 368), Vector2(5664, 368), Vector2(6848, 368), Vector2(8064, 368), Vector2(9246, 368), Vector2(10496, 368)]
 
 [node name="SceneCameraMarker" type="Marker2D" parent="CameraManaging/CameraMarker"]
 position = Vector2(616, 368)
@@ -916,9 +774,6 @@ position = Vector2(9296, 368)
 
 [node name="SceneCameraMarker9" type="Marker2D" parent="CameraManaging/CameraMarker"]
 position = Vector2(10496, 368)
-
-[node name="SceneCameraMarker10" type="Marker2D" parent="CameraManaging/CameraMarker"]
-position = Vector2(11776, 368)
 
 [node name="CameraSwitching" type="Node2D" parent="CameraManaging"]
 
@@ -1050,22 +905,6 @@ position = Vector2(11, 319)
 shape = SubResource("RectangleShape2D_lg3an")
 debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
 
-[node name="CameraLocation9b" type="Area2D" parent="CameraManaging/CameraSwitching"]
-position = Vector2(11088, 8)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation9b"]
-position = Vector2(11, 319)
-shape = SubResource("RectangleShape2D_lg3an")
-debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
-
-[node name="CameraLocation10" type="Area2D" parent="CameraManaging/CameraSwitching"]
-position = Vector2(11181, 8)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManaging/CameraSwitching/CameraLocation10"]
-position = Vector2(11, 319)
-shape = SubResource("RectangleShape2D_lg3an")
-debug_color = Color(2.74345e-06, 0.64953, 0.139713, 0.42)
-
 [node name="GlobalsCamera" type="Node" parent="CameraManaging"]
 script = ExtResource("9_0sv3t")
 
@@ -1154,13 +993,8 @@ position = Vector2(9944, 320)
 [connection signal="area_entered" from="Levels/Hazards/Section 9/Spikes13" to="Players/lab_rat" method="_on_death_block_area_entered"]
 [connection signal="area_entered" from="Levels/Hazards/Section 9/Spikes5" to="Players/lab_rat" method="_on_death_block_area_entered"]
 [connection signal="area_entered" from="Levels/Hazards/Section 9/Spikes6" to="Players/lab_rat" method="_on_death_block_area_entered"]
-[connection signal="area_entered" from="Levels/Interactions/Section 2/keycard" to="Levels/Interactions/KeyDoors" method="_on_keycard_area_entered"]
 [connection signal="area_entered" from="Levels/Interactions/Section 5/SecretArea2D" to="Levels/Interactions/Section 5/SecretArea2D" method="_on_area_entered"]
-[connection signal="area_entered" from="Levels/Interactions/Section 6/NoCreationArea" to="Players/Mouse" method="_on_no_creation_area_area_entered"]
-[connection signal="area_exited" from="Levels/Interactions/Section 6/NoCreationArea" to="Players/Mouse" method="_on_no_creation_area_area_exited"]
-[connection signal="area_entered" from="Levels/Interactions/Section 7/keycard2" to="Levels/Interactions/KeyDoors" method="_on_keycard_2_area_entered"]
 [connection signal="CameraLocation1" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_1"]
-[connection signal="CameraLocation10" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_10"]
 [connection signal="CameraLocation2" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_2"]
 [connection signal="CameraLocation3" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_3"]
 [connection signal="CameraLocation4" from="CameraManaging/CameraMarker" to="CameraManaging/CameraMarker" method="_on_camera_location_4"]
@@ -1185,5 +1019,3 @@ position = Vector2(9944, 320)
 [connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation8" to="Players/lab_rat" method="_on_camera_location_8_area_entered"]
 [connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation8b" to="Players/lab_rat" method="_on_camera_location_8_area_entered"]
 [connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation9" to="Players/lab_rat" method="_on_camera_location_9_area_entered"]
-[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation9b" to="Players/lab_rat" method="_on_camera_location_9_area_entered"]
-[connection signal="area_entered" from="CameraManaging/CameraSwitching/CameraLocation10" to="Players/lab_rat" method="_on_camera_location_10_area_entered"]

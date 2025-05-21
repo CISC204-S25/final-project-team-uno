@@ -1,4 +1,5 @@
-extends Area2D
+extends Node2D
+#Globals: NumberSystem
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,8 +11,7 @@ func _process(delta):
 	pass
 
 
-func _on_body_entered(body):
-	# Check if the player entered
-	if body.is_in_group("CharacterBody2D"):
-		# Change to the next scene
-		get_tree().change_scene_to_file("res://Scenes/Levels/Main_Scene.tscn")
+func _on_area_2d_area_entered(_area):
+	GlobalNumberSystem.MedalsCollected += 1
+	hide()
+	queue_free()

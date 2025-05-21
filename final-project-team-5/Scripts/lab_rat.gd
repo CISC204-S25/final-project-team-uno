@@ -82,3 +82,7 @@ func _on_camera_location_8_area_entered(_area):
 
 func _on_camera_location_9_area_entered(_area):
 	GlobalCameraManager.camera_location = 9
+
+
+func _on_camera_location_10_area_entered(_area):
+	GlobalCameraManager.camera_location = 10

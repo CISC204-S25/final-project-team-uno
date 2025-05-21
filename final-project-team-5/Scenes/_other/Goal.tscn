@@ -32,14 +32,13 @@ shape = SubResource("RectangleShape2D_frjrx")
 
 [node name="goal" type="Area2D" parent="."]
 position = Vector2(319, 216)
-collision_layer = 8
 script = ExtResource("1_xyam5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="goal"]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_oqhqd")
 
-[node name="lab_rat" parent="." instance=ExtResource("2_1654y")]
+[node name="lab_rat" parent="." groups=["CharacterBody2D"] instance=ExtResource("2_1654y")]
 position = Vector2(317, -69.9999)
 scale = Vector2(0.4, 0.4)
 jumpVelocity = -350.0
@@ -50,5 +49,4 @@ gravityPull = 65
 unique_name_in_owner = true
 zoom = Vector2(2.5, 2.5)
 
-[connection signal="area_entered" from="goal" to="goal" method="_on_area_entered"]
 [connection signal="body_entered" from="goal" to="goal" method="_on_body_entered"]

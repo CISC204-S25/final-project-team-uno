@@ -1,4 +1,9 @@
-extends Area2D
+extends Node
+
+var Deaths: int #Buddy & drone's death
+var MedalsCollected: int
+
+var DoorsOpened: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,10 +13,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-
-func _on_body_entered(body):
-	# Check if the player entered
-	if body.is_in_group("CharacterBody2D"):
-		# Change to the next scene
-		get_tree().change_scene_to_file("res://Scenes/Levels/Main_Scene.tscn")

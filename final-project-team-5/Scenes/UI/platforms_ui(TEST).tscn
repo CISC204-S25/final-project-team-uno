@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bobfmjxxt3hk6"]
 
-[ext_resource type="Script" path="res://Scripts/platforms_ui_script.gd" id="1_a0xck"]
+[ext_resource type="Script" path="res://Scripts/UI/platforms_ui_script.gd" id="1_a0xck"]
 [ext_resource type="PackedScene" uid="uid://dfucaseofrsl2" path="res://Scenes/Player Driven (placeholder name)/Created Platform.tscn" id="2_4lp3e"]
 [ext_resource type="Script" path="res://Scripts/Globals/global_platform_organizing.gd" id="3_hahm7"]
 [ext_resource type="PackedScene" uid="uid://ceyp7ov5d8n1" path="res://Scenes/Controls/Mouse(test).tscn" id="4_kcy74"]
@@ -36,6 +36,8 @@ text = "   Moving (➡️)  "
 script = ExtResource("3_hahm7")
 
 [node name="NoCreationArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoCreationArea"]
 position = Vector2(112, 32)

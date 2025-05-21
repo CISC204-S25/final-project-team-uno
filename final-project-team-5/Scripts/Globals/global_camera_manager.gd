@@ -7,7 +7,8 @@ extends Node
 var current_camera: int
 var camera_location: int
 
-var buddy_teleporting: bool
+var buddy_teleporting: bool #changes buddy's spawn after death...
+	#...I don't know why I put it in this script.
 #@export var SceneCamera: Camera2D
 #@export var CameraMarkerArray = []
 
@@ -22,5 +23,5 @@ func _process(_delta):
 	pass
 
 func transitionCamera(from: Camera2D, to: Camera2D, duration: float = 0.2) -> void:
-	pass
+	pass #might be used later
 	

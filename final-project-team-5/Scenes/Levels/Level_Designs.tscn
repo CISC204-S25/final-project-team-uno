@@ -162,6 +162,24 @@ shape = SubResource("RectangleShape2D_1uwx4")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
+[node name="StaticBody2D5" type="StaticBody2D" parent="Sections/Section1"]
+position = Vector2(-40, 352)
+rotation = -1.57079
+scale = Vector2(2.81, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sections/Section1/StaticBody2D5"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+position = Vector2(-0.294128, -0.000244141)
+scale = Vector2(0.5, 0.915584)
+texture = ExtResource("12_i2p2g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section1/StaticBody2D5"]
+position = Vector2(6.10352e-05, -0.000366211)
+scale = Vector2(1.17647, 1)
+shape = SubResource("RectangleShape2D_xxb1o")
+debug_color = Color(1, 1, 1, 0.42)
+metadata/_edit_lock_ = true
+
 [node name="Section2" type="Node2D" parent="Sections"]
 position = Vector2(-232, 0)
 
@@ -365,6 +383,24 @@ shape = SubResource("RectangleShape2D_xxb1o")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
+[node name="StaticBody2D6" type="StaticBody2D" parent="Sections/Section3"]
+position = Vector2(1240, 224)
+rotation = -1.57079
+scale = Vector2(1.85, 0.76)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sections/Section3/StaticBody2D6"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+position = Vector2(-0.294128, -0.000244141)
+scale = Vector2(0.5, 0.915584)
+texture = ExtResource("12_i2p2g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section3/StaticBody2D6"]
+position = Vector2(6.10352e-05, -0.000366211)
+scale = Vector2(1.17647, 1)
+shape = SubResource("RectangleShape2D_xxb1o")
+debug_color = Color(1, 1, 1, 0.42)
+metadata/_edit_lock_ = true
+
 [node name="Platform" type="Node2D" parent="Sections/Section3"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sections/Section3/Platform"]
@@ -431,57 +467,21 @@ shape = SubResource("RectangleShape2D_xxb1o")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
-[node name="FloorSquare2" type="StaticBody2D" parent="Sections/Section3"]
-position = Vector2(1152, 592)
+[node name="Floor7" type="StaticBody2D" parent="Sections/Section3"]
+position = Vector2(-128, 200)
 rotation = -1.57079
-scale = Vector2(0.404, 0.361)
+scale = Vector2(1.60012, 0.451726)
 
-[node name="Sprite2D" type="Sprite2D" parent="Sections/Section3/FloorSquare2"]
+[node name="Sprite2D" type="Sprite2D" parent="Sections/Section3/Floor7"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
-position = Vector2(1.91331e-05, 7.40224e-06)
+position = Vector2(0.850268, -0.000244141)
 scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_upuuu")
+texture = ExtResource("12_i2p2g")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section3/FloorSquare2"]
-position = Vector2(0.000549316, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section3/Floor7"]
+position = Vector2(2.16223, -0.000366211)
 scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_3ebx5")
-debug_color = Color(1, 1, 1, 0.42)
-metadata/_edit_lock_ = true
-
-[node name="FloorSquare3" type="StaticBody2D" parent="Sections/Section3"]
-position = Vector2(1152, 488)
-rotation = -1.57079
-scale = Vector2(0.404, 0.361)
-
-[node name="Sprite2D" type="Sprite2D" parent="Sections/Section3/FloorSquare3"]
-modulate = Color(0.423651, 0.423651, 0.423651, 1)
-position = Vector2(1.91331e-05, 7.40224e-06)
-scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_upuuu")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section3/FloorSquare3"]
-position = Vector2(0.000549316, 0)
-scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_3ebx5")
-debug_color = Color(1, 1, 1, 0.42)
-metadata/_edit_lock_ = true
-
-[node name="FloorSquare4" type="StaticBody2D" parent="Sections/Section3"]
-position = Vector2(1152, 382)
-rotation = -1.57079
-scale = Vector2(0.404, 0.361)
-
-[node name="Sprite2D" type="Sprite2D" parent="Sections/Section3/FloorSquare4"]
-modulate = Color(0.423651, 0.423651, 0.423651, 1)
-position = Vector2(1.91331e-05, 7.40224e-06)
-scale = Vector2(0.5, 0.915584)
-texture = ExtResource("13_upuuu")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section3/FloorSquare4"]
-position = Vector2(0.000549316, 0)
-scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_3ebx5")
+shape = SubResource("RectangleShape2D_xxb1o")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
@@ -798,6 +798,7 @@ rotation = -1.57079
 scale = Vector2(0.404, 0.361)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section4/FloorSquare(Move)"]
+visible = false
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
@@ -806,7 +807,6 @@ texture = ExtResource("13_upuuu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/FloorSquare(Move)"]
 position = Vector2(0.000549316, 0)
 scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_3ebx5")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
@@ -816,6 +816,7 @@ rotation = -1.57079
 scale = Vector2(0.404, 0.361)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section4/FloorSquare(Move)2"]
+visible = false
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
 position = Vector2(1.91331e-05, 7.40224e-06)
 scale = Vector2(0.5, 0.915584)
@@ -824,7 +825,6 @@ texture = ExtResource("13_upuuu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sections/Section4/FloorSquare(Move)2"]
 position = Vector2(0.000549316, 0)
 scale = Vector2(1.17647, 1)
-shape = SubResource("RectangleShape2D_3ebx5")
 debug_color = Color(1, 1, 1, 0.42)
 metadata/_edit_lock_ = true
 
@@ -2975,8 +2975,8 @@ metadata/_edit_lock_ = true
 position = Vector2(8399, 0)
 
 [node name="Floor3" type="StaticBody2D" parent="Sections/Section9"]
-position = Vector2(1281, 684)
-scale = Vector2(0.85, 1)
+position = Vector2(1153, 684)
+scale = Vector2(0.409961, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Floor3"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
@@ -3008,7 +3008,7 @@ metadata/_edit_lock_ = true
 
 [node name="Floor9" type="StaticBody2D" parent="Sections/Section9"]
 position = Vector2(1064, 31)
-scale = Vector2(1.60012, 0.451726)
+scale = Vector2(1.52012, 0.451726)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/Floor9"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
@@ -3226,7 +3226,7 @@ debug_color = Color(0.805911, 0, 0.101852, 0.419608)
 [node name="FloorSquare2" type="StaticBody2D" parent="Sections/Section9"]
 position = Vector2(1176, 336)
 rotation = -1.57079
-scale = Vector2(0.6, 0.536)
+scale = Vector2(0.6, 0.415922)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sections/Section9/FloorSquare2"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
