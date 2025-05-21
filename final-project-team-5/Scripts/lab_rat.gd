@@ -1,5 +1,5 @@
 extends CharacterBody2D
-#Uses GlobalPlatformOrganizes & GlobalCameraManager
+#Uses GlobalPlatformOrganizes & GlobalCameraManager & GlobalNumberSystem
 
 @export var speed = 300.0
 @export var jumpVelocity = -400.0
@@ -39,12 +39,14 @@ func _on_death_block_area_entered(_area: Area2D) -> void:
 	get_tree().reload_current_scene()
 	GlobalPlatformOrganizing.PlatformLimit = 2 #restarts platform limit after death
 	GlobalCameraManager.buddy_teleporting = true
+	GlobalNumberSystem.Deaths += 1
 
 
 func _on_restart_area_entered(_area):
 	get_tree().reload_current_scene()
 	GlobalPlatformOrganizing.PlatformLimit = 2 #restarts platform limit after restart
 	GlobalCameraManager.buddy_teleporting = true
+	GlobalNumberSystem.Deaths += 1
 	
 
 

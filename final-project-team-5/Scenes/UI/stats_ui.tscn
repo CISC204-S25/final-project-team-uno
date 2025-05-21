@@ -8,9 +8,10 @@
 outline_size = 6
 outline_color = Color(0, 0, 0, 1)
 
-[node name="stats_ui" type="Node2D" node_paths=PackedStringArray("Medals")]
+[node name="stats_ui" type="Node2D" node_paths=PackedStringArray("Medals", "Deaths")]
 script = ExtResource("1_lp8tc")
 Medals = NodePath("Medals/HBoxContainer/Medal Number")
+Deaths = NodePath("Deaths/HBoxContainer/Deaths")
 
 [node name="Medals" type="Node2D" parent="."]
 
@@ -39,6 +40,29 @@ label_settings = SubResource("LabelSettings_c8b2g")
 [node name="Deaths" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Deaths"]
-position = Vector2(16, 80)
+modulate = Color(0, 0, 0, 1)
+position = Vector2(24, 88)
 scale = Vector2(0.045, 0.045)
 texture = ExtResource("3_654u4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Deaths"]
+offset_left = 48.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 112.0
+
+[node name="X" type="Label" parent="Deaths/HBoxContainer"]
+layout_mode = 2
+text = "X"
+label_settings = SubResource("LabelSettings_c8b2g")
+
+[node name="Deaths" type="Label" parent="Deaths/HBoxContainer"]
+layout_mode = 2
+text = "[00]"
+label_settings = SubResource("LabelSettings_c8b2g")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
