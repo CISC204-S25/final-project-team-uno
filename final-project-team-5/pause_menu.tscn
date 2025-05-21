@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://ko2ylqjq3v2j"]
+
+[ext_resource type="Script" uid="uid://b72e1f37bu5id" path="res://Scripts/UI/main_menu.gd" id="1_hdmo1"]
+[ext_resource type="Script" uid="uid://ou1ieeihsb6t" path="res://Scripts/UI/pause_menu.gd" id="1_hjajn"]
+[ext_resource type="Script" uid="uid://bqwoe4i4x7t06" path="res://Scenes/UI/return_to_game.gd" id="2_r2i2h"]
+
+[node name="Pause Menu" type="Control"]
+layout_mode = 3
+anchor_left = 0.004
+anchor_top = 0.005
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.608
+offset_top = -0.24
+offset_right = 10.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hjajn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.372549)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.003
+anchor_top = -0.002
+anchor_right = 1.0
+anchor_bottom = 0.956
+offset_left = 10.508
+offset_top = 2.326
+offset_right = 8.0
+offset_bottom = 0.171997
+color = Color(0, 0.545098, 0.545098, 1)
+
+[node name="MenuButton" type="MenuButton" parent="."]
+custom_minimum_size = Vector2(0.05, 0)
+layout_mode = 0
+offset_left = -100.0
+offset_top = -26.0
+offset_right = 581.0
+offset_bottom = 61.0
+scale = Vector2(2.045, 2.045)
+text = "Pause"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 317)
+
+[node name="Return to Game" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.01
+anchor_top = 0.174
+anchor_right = -0.01
+anchor_bottom = 0.174
+offset_left = 415.64
+offset_top = 78.638
+offset_right = 837.64
+offset_bottom = 159.638
+text = "Return to Game"
+script = ExtResource("2_r2i2h")
+
+[node name="Main Menu" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.353
+anchor_bottom = 0.125
+offset_left = 419.0
+offset_top = 331.0
+offset_right = 415.108
+offset_bottom = 313.125
+text = "Main Menu"
+script = ExtResource("1_hdmo1")
+
+[connection signal="pressed" from="Main Menu" to="Main Menu" method="_button_pressed"]
