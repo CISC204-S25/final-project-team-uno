@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyryt3kh0yckn"]
+
+[ext_resource type="Script" uid="uid://qeuyq1e6rmwf" path="res://Scripts/UI/exit.gd" id="1_7mewq"]
+[ext_resource type="AudioStream" uid="uid://b5kr3i57o3x6n" path="res://Music/Alert_Breach (1).mp3" id="2_hlgxo"]
+[ext_resource type="Script" uid="uid://cjaa18a3uyye" path="res://Scenes/audio_stream_player_2d.gd" id="2_slhv3"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.458
+anchor_bottom = 0.324
+offset_right = 605.384
+offset_bottom = 424.048
+color = Color(2.11775e-06, 0.579448, 0.57955, 1)
+
+[node name="MenuMusic" type="AudioStreamPlayer2D" parent="ColorRect"]
+stream = ExtResource("2_hlgxo")
+volume_db = 0.125
+pitch_scale = 1.27
+autoplay = true
+playback_type = 1
+parameters/looping = true
+script = ExtResource("2_slhv3")
+
+[node name="MenuButton" type="MenuButton" parent="."]
+layout_mode = 0
+offset_left = 418.0
+offset_top = -19.0
+offset_right = 555.0
+offset_bottom = 70.0
+scale = Vector2(1.635, 1.635)
+text = "MAIN MENU
+"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(569, 317)
+
+[node name="Play Game" type="Button" parent="."]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 179.0
+offset_right = 725.0
+offset_bottom = 242.0
+text = "Play Game"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 363.0
+offset_top = 306.0
+offset_right = 713.0
+offset_bottom = 359.0
+text = "Exit"
+script = ExtResource("1_7mewq")
+
+[connection signal="pressed" from="Exit" to="Exit" method="_on_Button_pressed"]
